@@ -1,527 +1,263 @@
 <!DOCTYPE html>
 <html>
 <head>
+  <META NAME="ROBOTS" CONTENT="NOINDEX, NOFOLLOW">
   <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
   <title>Sagent Management</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="shortcut icon" type="img/ico" href="img/sangenticon.ico">
+  <link href='http://fonts.googleapis.com/css?family=Nunito:300' rel='stylesheet' type='text/css'>
   <link href='http://fonts.googleapis.com/css?family=Krona+One' rel='stylesheet' type='text/css'>
   <link href='http://fonts.googleapis.com/css?family=Archivo+Black' rel='stylesheet' type='text/css'>
   <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css" />
-  <link rel="stylesheet" type="text/css" href="css/bc.css"/>
+  <link rel="stylesheet/less" type="text/css" href="css/bc.less"/>
+  <script src="js/less-1.7.0.min.js"></script>
   <script src="http://code.jquery.com/jquery.js"></script>
+  <script src="js/jquery-ui.min.js"></script>
   <script type="text/javascript" src="js/bootstrap.min.js"></script>
 </head>
 <body>
   <div class="body-wrapper">
 
-    <div class="nav navbar-fixed-top">
+    <nav class="navbar navbar-fixed-top" role="navigation">
       <div class="container">
-        <div class="row">
-          <div class="col-sm-2 menu text-center">
-            <ul class="">
-              <li class="financial link">Financial Services</li>
-              <li class="tax link">Tax Outsourcing</li>
-            </ul>
-          </div>
-          <div class="col-sm-2 menu text-center">
-            <ul class="">
-              <li class="consulting link">Consulting</li>
-              <li class="clients link">Clients</li>
-            </ul>
-          </div>
-          <div class="col-sm-4 text-center">
-            <header class="text-center home link">
-              <div class="logo1">
-                <span>SAGENT</span>
-              </div>
-              <div class="logo2">
-                <span>MANAGEMENT</span>
-              </div>
-            </header>
-          </div>
-          <div class="col-sm-2 menu text-center">
-            <ul class="">
-              <li class="about link">About Us</li>
-              <li class="team link">Our Team</li>
-            </ul>
-          </div>
-          <div class="col-sm-2 menu text-center">
-            <ul class="">
-              <li class="offices link">Offices</li>
-              <li class="contact link">Contact Us</li>
-            </ul>
-          </div>
-        </div><!--/.row-->
-      </div><!--/.container-->
-    </div><!--/.nav-->
+        <!-- Brand and toggle get grouped for better mobile display -->
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="#"><img src="img/logo.png" class="img-responsive"></a>
+        </div>
 
-    <div class="clearfix"></div>
+        <!-- Collect the nav links, forms, and other content for toggling -->
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+          <ul class="nav navbar-nav navbar-right">
+            <li><a href="#">Services</a></li>
+            <li><a href="#">Who We Are</a></li>
+            <li><a href="#">Clients</a></li>
+            <li><a href="#">Contact</a></li>
+          </ul>
+        </div><!-- /.navbar-collapse -->
+      </div><!-- /.container-fluid -->
+    </nav>
 
-    <div class="billboard page">
+    <div class="container-fluid billboard">
       <div class="row">
-        <div class="col-sm-9 col-sm-offset-3">
-          <h3 class="headline">Expertise in <em>Financial Services</em>, <em>Taxes</em> and <em>Consulting</em> that provide our clients a significant advantage by allowing them to cost-effectively focus on their core business.</h3>
+        <div class="col-md-8 col-md-offset-2">
+          <h3 class="headline text-center">WE ARE <span class="off-color">EXPERTS</span> IN FINANCIAL SERVICES, TAX AND CONSULTING</h3>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-md-6 col-md-offset-3">          
+          <p class="tagline text-center">We provide our clients a significant advantage by allowing them to cost-effectively focus on their core business</p>
+          <p class="text-center"><a href="#" class="btn" role="button">CONTACT US</a></p>
         </div>
       </div>
     </div>
 
-    <div class="container messaging page section">
+    <div class="container services1">
+      <h1 class="super-title text-center">SERVICES</h1>
       <div class="row">
+        <div class="col-sm-4">
+          <div class="thumbnail">
+            <h3 class="text-center">Financial Services</h3>
+            <div class="thumbnail-divider text-center">
+              <span class="glyphicon glyphicon-usd"></span>
+            </div>
+            <ul>
+              <li>Accounting Outsourcing</li>
+              <li>SEC Compliance</li>
+              <li>Mergers &amp; Acquisitions</li>
+              <li>Negotiations Preparation</li>
+              <li>Corporate Structuring</li>
+              <li>Venture Capital</li>
+              <li>Treasury &amp; Cash Management</li>
+            </ul>
+            <div class="caption">
+              <p><a href="#" class="btn btn-default pull-right" role="button">Read more...</a></p>
+            </div>
+          </div>
+        </div><!--/.col-->
+        <div class="col-sm-4">
+          <div class="thumbnail">
+            <h3 class="text-center">Tax</h3>
+            <div class="thumbnail-divider text-center">
+              <span class="glyphicon glyphicon-book"></span>
+            </div>
+            <ul>
+              <li>Tax Savings &amp; Planning</li>
+              <li>Transfer Pricing</li>
+              <li>Multinational &amp; Jurisdictional Tax Compliance</li>
+            </ul>
+            <div class="caption">
+              <p><a href="#" class="btn btn-default pull-right" role="button">Read more...</a></p>
+            </div>
+          </div>
+        </div><!--/.col-->
+        <div class="col-sm-4">
+          <div class="thumbnail">
+            <h3 class="text-center">Consulting</h3>
+            <div class="thumbnail-divider text-center">
+              <span class="glyphicon glyphicon-briefcase"></span>
+            </div>
+            <ul>
+              <li>Business Operations</li>
+              <li>Human Resources Services</li>
+              <li>Valuation Services</li>
+              <li>Management Oversight</li>
+            </ul>
+            <div class="caption">
+              <p><a href="#" class="btn btn-default pull-right" role="button">Read more...</a></p>
+            </div>
+          </div>
+        </div><!--/.col-->
+      </div>
+    </div>
+<script type="text/javascript">
+$(document).ready(function() {
+  var servicesHeight = $('.services1 .row').height();
+  $('.services1 .thumbnail').css('height',servicesHeight);
+});
+</script>
+
+    <div class="container-fluid difference1">
+      <h1 class="super-title text-center">THE SAGENT DIFFERENCE</h1>
+      <div class="row">
+        <div class="col-sm-1 col-sm-offset-1 text-center number-me">1</div>
         <div class="col-sm-9">
-          <p>We take pride in our attention to our clients. Our business is meeting their needs and exceeding their expectations.</p>
-          <p>Sagent delivers value through a comprehensive suite of services that strengthens management teams and allows them to focus on the things critical to their business.</p>
-          <p>Obtain access to expertise and technical capabilities. Cost effectively.</p>
-          <p>Explore our premium professional services today.</p>
+          <h3>Gobal Knowledge. Local Service.</h3>
+          <p>Our unique global structure delivers global expertise with the added benefit of providing local attention and resources in the US, Israel and Asia Pacific.</p>
+          <p class="super-point">Rely on one, comprehensive, global solution</p>
         </div>
       </div>
-    </div><!--/.container-->
-
-    <div class="about page">
-      <div class="header">
-        <div class="container">
-          <h2>ABOUT US</h2>
-        </div><!--/.container-->
-      </div>
-      <div class="container section">
-        <div class="row">
-          <div class="col-md-12">
-            <p>A broad range of clients look to Sagent Management as an expert business advisor and partner.</p>
-            <p>Sagent provides a full range of business advisory services to leading global, national and local companies and public institutions. Through our services, we enhance the value, manage the risk and improve the performance of our clients’ organizations.</p>
-            <p>Our global structure allows us to provide the tailored support that clients need – when and where they need it. We offer competitive fees that ultimately create substantial savings for our clientele.</p>
-            <p>In our view, project ownership, mutual understanding, shared expectations and constant and timely communication are the keys to a successful, long-term client relationship. Grow with us.</p>
-          </div>
-          <div class="col-sm-6 col-md-4 about-member">
-          </div>
+      <div class="row">
+        <div class="col-sm-1 col-sm-offset-1 text-center number-me">2</div>
+        <div class="col-sm-9">
+          <h3>Technical expertise. Vast experience.</h3>
+          <p>Above all else, Sagent prides itself on the high quality of its professionals and the technical expertise reflected in their work</p>
+          <p class="super-point">Leverage decades of international finance, accounting and tax expertise.</p>
         </div>
-      </div><!--/.container-->
-    </div><!--/.about-->
-
-    <div class="offices page">
-      <div class="header">
-        <div class="container">
-          <h2>OFFICES</h2>
-        </div><!--/.container-->
       </div>
-      <div class="container section">
-        <div class="row">
-          <div class="col-sm-6 col-md-3">
-            <div class="office text-center">
-              <h5 class="name">San Francisco</h5>
-              <img src="img/golden-gate-bridge-219798.jpg" class="img-responsive">
-              <p class="address">
-                1521 California Cir., 2nd Floor<br/>
-                Milpitas, CA 95035<br/>
-                (408) 263-1040 - Main<br/>
-                (408) 263-1044 - Fax
-              </p>
-            </div>
-          </div><!--/.col -->
-          <div class="col-sm-6 col-md-3">
-            <div class="office text-center">
-              <h5 class="name">San Diego</h5>
-              <img src="img/SD-bridge-3728.jpg" class="img-responsive">
-              <p class="address">
-                2110 S. Coast Highway<br/>
-                Suite M<br/>
-                Oceanside, CA 92054
-              </p>
-            </div>
-          </div><!--/.col -->
-          <div class="col-sm-6 col-md-3">
-            <div class="office text-center">
-              <h5 class="name">Chicago</h5>
-              <img src="img/chicago-191876.jpg" class="img-responsive">
-              <p class="address">
-                1340 Shermer Road<br/>
-                Suite 250<br/>
-                Northbrook, IL 60062
-              </p>
-            </div>
-          </div><!--/.col -->
-          <div class="col-sm-6 col-md-3">
-            <div class="office text-center">
-              <h5 class="name">Taiwan</h5>
-              <img src="img/taiwan-suspension-bridge-58061.jpg" class="img-responsive">
-              <p class="address">
-                10F-6 No. 171 Songde Road<br/>
-                Xinyi District<br/>
-                Taipei City, 110
-              </p>
-            </div>
-          </div><!--/.col -->
-          <div class="col-sm-6 col-md-3">
-            <div class="office text-center">
-              <h5 class="name">Los Angeles</h5>
-              <img src="img/Santa_Monica_Pier_2011.jpg" class="img-responsive">
-              <p class="address">
-                1930 South Brea Canyon Road<br/>
-                Suite 260<br/>
-                Diamond Bar, CA 91765
-              </p>
-            </div>
-          </div><!--/.col -->
-          <div class="col-sm-6 col-md-3">
-            <div class="office text-center">
-              <h5 class="name">Jerusalem</h5>
-              <img src="img/jerusalem-197801.jpg" class="img-responsive">
-              <p class="address">
-                Tel Aviv
-              </p>
-            </div>
-          </div><!--/.col -->
+      <div class="row">
+        <div class="col-sm-1 col-sm-offset-1 text-center number-me">3</div>
+        <div class="col-sm-9">
+          <h3>Outsourced services. In-house approach.</h3>
+          <p>We have been on the client side, and understand what makes a value-add business partner.  We serve as an extension of your team to let you focus on your core business.</p>
+          <p class="super-point">Cost-effectively utilize our premium services and realize significant ROI.</p>
         </div>
-      </div><!--/.container-->
-    </div><!--/.offices-->
-
-    <div class="contact page">
-      <div class="header">
-        <div class="container">
-          <h2>CONTACT US</h2>
-        </div><!--/.container-->
       </div>
-      <div class="container section">
-        <div class="row">
-          <div class="col-md-9">
-            <div id="contactFormWrapper">
-              <div class="form-group">
-                <label for="contactFormName" class="col-sm-2 control-label">Your Name:</label>
-                <div class="col-sm-10">
-                  <input type="text" class="form-control" id="contactFormName" name="contact[name]" placeholder="John Doe" />
-                </div>
+    </div>
+
+    <div class="container-fluid team1">
+      <h1 class="super-title text-center">THE TEAM</h1>
+      <div class="row">
+        <div class="col-sm-7 members">
+          <div class="row">
+            <div class="col-md-3 col-xs-6 col-md-offset-1 member text-center">
+              <img src="img/yen.jpg" class="img-circle img-responsive" />
+              <h4 class="name">John Doe</h4>
+              <p class="title">President</p>
+              <div class="bio">
+                <p>Yen brings significant accounting and finance expertise and leadership to Sagent. His extensive background allows him to develop and implement the best service offerings that support clients facing the challenges in today's business world. His major accomplishments include the planning and implementation of the international tax structures and operations, fundraising for clients, advising on acquisitions and mergers and ensuring that companies are in compliance with regulatory and statutory laws.</p>
+                <a class="linkedin" target="_blank" href="http://linkedin.com/in/sagentmanagement"><img src="img/s-linkedin.png" /></a>
               </div>
-              <div class="clearfix"></div>
-              <div class="form-group">
-                <label for="contactFormEmail" class="col-sm-2 control-label">Email:</label>
-                <div class="col-sm-10">
-                  <input type="email" class="form-control" id="contactFormEmail" name="contact[email]" placeholder="john@example.com">
-                </div>
+            </div>
+            <div class="col-md-3 col-xs-6 member text-center">
+              <img src="img/yen.jpg" class="img-circle img-responsive" />
+              <h4 class="name">John Doe</h4>
+              <p class="title">President</p>
+              <div class="bio">
+                <p>Founder of Sagent Management, Leo Yen is the firm's President, responsible for directing the strategic and client operations of the company. This direct interaction and close collaboration with clients allows him to gain a thorough understanding of their needs and to develop tailored services for each client. Yen also advises clients on strategic and technical financial matters from his wide financial experience.</p>
+                <a class="linkedin" target="_blank" href="http://linkedin.com/in/sagentmanagement"><img src="img/s-linkedin.png" /></a>
               </div>
-              <div class="clearfix"></div>
-              <br/>
-              <div class="form-group">
-                <label for="contactFormTelephone" class="col-sm-2 control-label">Phone number:</label>
-                <div class="col-sm-10">
-                  <input type="email" class="form-control" id="contactFormTelephone" name="contact[phone]" placeholder="john@555-555-1234">
-                </div>
+            </div>
+            <div class="col-md-3 col-xs-6 member text-center">
+              <img src="img/yen.jpg" class="img-circle img-responsive" />
+              <h4 class="name">John Doe</h4>
+              <p class="title">President</p>
+              <div class="bio">
+                <p>Founder of Sagent Management, Leo Yen is the firm's President, responsible for directing the strategic and client operations of the company. This direct interaction and close collaboration with clients allows him to gain a thorough understanding of their needs and to develop tailored services for each client. Yen also advises clients on strategic and technical financial matters from his wide financial experience.</p>
+                <a class="linkedin" target="_blank" href="http://linkedin.com/in/sagentmanagement"><img src="img/s-linkedin.png" /></a>
               </div>
-              <div class="clearfix"></div>
-              <div class="form-group">
-                <label for="contactFormMessage" class="col-sm-2 control-label">Message:</label>
-                <div class="col-sm-10">
-                  <textarea id="contactFormMessage" name="contact[body]" class="form-control" rows="5"></textarea>
-                </div>
+            </div>
+<!--          </div>
+          <div class="row"> -->
+            <div class="col-md-3 col-xs-6 member text-center">
+              <img src="img/yen.jpg" class="img-circle img-responsive" />
+              <h4 class="name">John Doe</h4>
+              <p class="title">President</p>
+              <div class="bio">
+                <p>Founder of Sagent Management, Leo Yen is the firm's President, responsible for directing the strategic and client operations of the company. This direct interaction and close collaboration with clients allows him to gain a thorough understanding of their needs and to develop tailored services for each client. Yen also advises clients on strategic and technical financial matters from his wide financial experience.</p>
+                <a class="linkedin" target="_blank" href="http://linkedin.com/in/sagentmanagement"><img src="img/s-linkedin.png" /></a>
               </div>
-              <div class="form-group">
-                <div class="col-sm-offset-2 col-sm-10">
-                  <button type="submit" value="SEND" class="btn btn-default" id="contactFormSubmit">Send</button>
-                </div>
+            </div>
+            <div class="col-md-3 col-xs-6 member text-center">
+              <img src="img/yen.jpg" class="img-circle img-responsive" />
+              <h4 class="name">John Doe</h4>
+              <p class="title">President</p>
+              <div class="bio">
+                <p>Founder of Sagent Management, Leo Yen is the firm's President, responsible for directing the strategic and client operations of the company. This direct interaction and close collaboration with clients allows him to gain a thorough understanding of their needs and to develop tailored services for each client. Yen also advises clients on strategic and technical financial matters from his wide financial experience.</p>
+                <a class="linkedin" target="_blank" href="http://linkedin.com/in/sagentmanagement"><img src="img/s-linkedin.png" /></a>
               </div>
-            </div><!-- contactWrapper -->
-
-          </div>
+            </div>
+            <div class="col-md-3 col-xs-6 member text-center">
+              <img src="img/yen.jpg" class="img-circle img-responsive" />
+              <h4 class="name">John Doe</h4>
+              <p class="title">President</p>
+              <div class="bio">
+                <p>Founder of Sagent Management, Leo Yen is the firm's President, responsible for directing the strategic and client operations of the company. This direct interaction and close collaboration with clients allows him to gain a thorough understanding of their needs and to develop tailored services for each client. Yen also advises clients on strategic and technical financial matters from his wide financial experience.</p>
+                <a class="linkedin" target="_blank" href="http://linkedin.com/in/sagentmanagement"><img src="img/s-linkedin.png" /></a>
+              </div>
+            </div>
+            <div class="col-md-3 col-xs-6 member text-center">
+              <img src="img/yen.jpg" class="img-circle img-responsive" />
+              <h4 class="name">John Doe</h4>
+              <p class="title">President</p>
+              <div class="bio">
+                <p>Founder of Sagent Management, Leo Yen is the firm's President, responsible for directing the strategic and client operations of the company. This direct interaction and close collaboration with clients allows him to gain a thorough understanding of their needs and to develop tailored services for each client. Yen also advises clients on strategic and technical financial matters from his wide financial experience.</p>
+                <a class="linkedin" target="_blank" href="http://linkedin.com/in/sagentmanagement"><img src="img/s-linkedin.png" /></a>
+              </div>
+            </div>
+          </div> 
         </div>
-      </div><!--/.container-->
-    </div><!--/.contact-->
-
-    <div class="financial page">
-      <div class="header">
-        <div class="container">
-          <h2>FINANCIAL SERVICES</h2>
-        </div><!--/.container-->
-      </div>
-      <div class="container section">
-        <div class="row">
-          <div class="col-md-12">
-            <h4>Accounting Outsourcing</h4>
-            <p>Our suite of accounting services can replace entire accounting departments or fulfill more specific needs. We offer services to, and accounting management for, companies seeking temporary or start-up financial expertise covering corporate and treasury functions. Our clients gain immediate access to financial professionals to address any fiscal requirement.</p>
-
-            <h4>SEC Compliance</h4>
-            <p>Our expertise in, and state-of-the-art tools around, SEC requirements (e.g. Sarbanes-Oxley) will assist you in developing, establishing and documenting effective internal control structures and procedures. We perform risk assessments related to corporate governance processes, organizational transparency and internal controls to ensure that you employ best practices and are in compliance with SEC regulations.</p>
-
-            <h4>Mergers & Acquisitions</h4>
-            <p>We serve as advisors on all stages of business transactions. Services include performing due diligence, participating in negotiations, recommending optimal tax and accounting structures, analyzing alternatives and offers and advising on closing and transitions between parties.</p>
-
-            <h4>Negotiations Preparation</h4>
-            <p>Our experienced team of individuals will perform all the diligence necessary to certify that the client is making a well-informed decision on all types of financial negotiations. We provide clients a competitive advantage through insights into industry trends and best practices. We actively participate during the deal-making process and drafting of the agreement/contract.</p>
-
-            <h4>Corporate Structuring</h4>
-            <p>Our team develops domestic and international corporate financial structures with a focus on subsidiaries, acquisitions or recently merged companies. Our experts perform a meticulous analysis of current structures and procedures to develop recommendations and action plans that maximize your financial objectives. We support clients throughout the implementation of these changes.</p>
-
-            <h4>Venture Capital</h4>
-            <p>We have strategically partnered with venture capitalists and their affiliates to offer detailed and accurate accounting services. We provide management and financial officer guidance over their accounting and financial transactions relating to their investments. Sagent essentially acts as their “rental CFO” by becoming a valuable resource for investees with financial issues.</p>
-
-            <h4>Treasury &amp; Cash Management</h4>
-            <p>We assist clients with their treasury functions by recommending investment and financing policies, providing compliance with accounting standards and reducing financial risk management. Other related services include the evaluation and improvement of cash management processes such as bank selection processes, bank relationship management (fee and account structure), cross border cash management structures, efficient tax structures, electronic banking and credit risk management.</p>
-          </div>
-        </div>
-      </div><!--/.container-->
-    </div><!--/.financial-->
-
-    <div class="tax page">
-      <div class="header">
-        <div class="container">
-          <h2>TAX OUTSOURCING</h2>
-        </div><!--/.container-->
-      </div>
-      <div class="container section">
-        <div class="row">
-          <div class="col-md-12">
-            <h4>Tax Savings &amp; Planning</h4>
-            <p>Our services offer clients a true partner in solving their tax issues. Through in-depth analysis and planning, clients minimize tax exposure that would otherwise negatively impact operations and business transactions. We guide clients on how to implement new tax methods and provide actionable recommendations and strategies that result in substantial tax savings.</p>
-
-            <h4>Transfer Pricing</h4>
-            <p>Our team of transfer pricing experts advises clients on how to plan for, manage, comply with, document and defend complex and dynamic issues around transfer pricing in order to ultimately maximize tax savings on a worldwide basis. With more countries challenging companies on their transfer pricing strategies and imposing onerous processes and penalties, our transfer pricing strategies aim to be commercially viable and balanced while generating tax efficiencies and mitigating the risk of challenges from fiscal authorities.</p>
-
-            <h4>Multinational &amp; Jurisdictional Tax Compliance</h4>
-            <p>Tax compliance matters continue to proliferate at a rapid pace. We provide timely, expert advice and planning strategies on a range of tax issues such as income taxes, sales and use taxes, property taxes and VAT. As a result, our clients realize substantial tax savings while obtaining sustainable in-house expertise and improving administrative efficiency.</p>
-          </div>
-        </div>
-      </div><!--/.container-->
-    </div><!--/.tax-->
-
-    <div class="consulting page">
-      <div class="header">
-        <div class="container">
-          <h2>CONSULTING SERVICES</h2>
-        </div><!--/.container-->
-      </div>
-      <div class="container section">
-        <div class="row">
-          <div class="col-md-12">
-            <h4>Business Operations</h4>
-            <p>By collaborating closely with our clients’ management and staff, we recommend actionable strategies to improve their operations by implementing new technologies and procedures, eliminating redundant or unnecessary processes and increasing efficiency by filling gaps. We can also assist your business in matters relating to compliance with government regulations and laws, business license or tax issues and logistics around your staff and office space.</p>
-
-            <h4>Human Resources Services</h4>
-            <p>Sagent provides a holistic suite of HR services for clients, including payroll &amp; taxes, benefits (healthcare, insurance, other voluntary benefits), retirement plans, workers’ compensation, risk mitigation, compliance and other customized HR services. Outsourcing your HR function to Sagent reduces your internal overhead and HR servicing costs and keeps your employees more productive while leveraging our always current domain expertise in HR.</p>
-
-            <h4>Valuation Services</h4>
-            <p>Our Valuation Services cover a multitude of areas including the valuation of equity positions, intellectual property, purchase price allocations and intangible assets. We also offer strategic advice on the structure and pricing of corporate transactions such as business sales, mergers and acquisitions and corporate restructurings. Further, we assist clients in the areas of financial planning and analysis, dynamic revenue modeling, strategic and market analysis, economic loss and damage calculations and project financing.</p>
-
-            <h4>Management Oversight</h4>
-            <p>Our Management Oversight services provide regular reviews and reports on the management and performance of subsidiaries, in order to provide parent companies with unfiltered insight. We specialize in gathering and analyzing large amounts of complex data where our unbiased, third party standing ensures the accuracy and integrity of reported results.</p>
-          </div>
-        </div>
-      </div><!--/.container-->
-    </div><!--/.consulting-->
-
-    <div class="clients page">
-      <div class="header">
-        <div class="container">
-          <h2>CLIENTS</h2>
-        </div><!--/.container-->
-      </div>
-      <div class="container section">
-        <div class="row">
-          <div class="col-md-12">
-            <p>Sagent Management services a broad base of clients across a range of industries including biotechnology, business services, real estate, venture capital and all areas of technology. Our clients range in size and stage from pre-funding to publicly traded Fortune 1000 companies. </p>
-
-            <h4>Testimonials</h4>
-            <p class="testimonial">We have relied on the Sagent team for expert guidance and execution on accounting, finance and tax matters both domestically and internationally. They have enabled us to focus on the business and build an internal team where appropriate. They have been great partners in every respect and along every step of the way.</p>
-            <p>- Marc Friend, CFO, Intalio Inc.</p>
-
-            <p class="testimonial">The team at Sagent is consistently spot on with its technical knowledge, subject matter expertise and strategic advice. What's more, they wrap this up with premium and personalized client service and always go the extra mile.</p>
-            <p>- Hagi Schwartz, Venture Capitalist, Magnolia Capital and WTI</p>
-          </div>
-        </div>
-      </div><!--/.container-->
-    </div><!--/.clients-->
-
-    <div class="team page">
-      <div class="header">
-        <div class="container">
-          <h1>THE TEAM</h1>
-        </div><!--/.container-->
-      </div>
-      <div class="container section">
-        <div class="row">
-          <div class="col-sm-6 col-md-3 team-overview">
+        <div class="col-sm-5 bios-col">
+          <div class="bios">
+            <h3>Our Team</h3>
             <p>We play close attention to who we add to our team, and we each take pride in working with one another and in being experts in our respective fields.</p>
             <p>Our core team members are listed here.</p>
           </div>
-          <div class="col-sm-6 col-md-3" data-toggle="modal" data-target="#modal-leo">
-            <div class="team-member text-center">
-              <img src="img/about-our-team-01yen.jpg">
-              <h5 class="name">Leo Yen</h5>
-              <h5 class="title">President</h5>
-            </div>
-          </div><!--/.col -->
-              <!-- Modal -->
-              <div class="modal fade" id="modal-leo" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
-                <div class="modal-dialog">
-                  <div class="modal-content">
-                      <div class="modal-header">
-                        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
-                        <h4 class="modal-title" id="myModalLabel">Leo Yen, President</h4>
-                      </div>
-                      <div class="modal-body">
-                        <div class="pull-left mugshot">
-                          <img src="img/about-our-team-01yen.jpg">
-                          <a class="linkedin" target="_blank" href="http://linkedin.com/in/sagentmanagement">
-                            <img src="img/s-linkedin.png" />
-                          </a>
-                        </div>
-                        <p>Founder of Sagent Management, Leo Yen is the firm's President, responsible for directing the strategic and client operations of the company. This direct interaction and close collaboration with clients allows him to gain a thorough understanding of their needs and to develop tailored services for each client. Yen also advises clients on strategic and technical financial matters from his wide financial experience.</p>
-                        <p>Yen brings significant accounting and finance expertise and leadership to Sagent. His extensive background allows him to develop and implement the best service offerings that support clients facing the challenges in today's business world. His major accomplishments include the planning and implementation of the international tax structures and operations, fundraising for clients, advising on acquisitions and mergers and ensuring that companies are in compliance with regulatory and statutory laws.</p>
-                        <p>In his senior positions at PricewaterhouseCoopers and Ernst &amp; Young, Yen directed the tax consulting accounts of emerging and established technology companies as well as finance, real estate and biotech corporations.</p>
-                        <p>Yen also served as Chief Financial Officer (CFO) for a publicly-traded U.S. company based in Fremont, California as well as interim and acting CFO responsible for direction of the financial activities and operations for numerous clients. </p>
-                        <p>He holds two bachelor's degrees from California State Polytechnic University in Pomona. Yen majored in finance, real estate and law as well as in accounting. He is a Certified Public Accountant in California.</p>
-                        
-                      </div>
-                  </div><!-- /.modal-content -->
-                </div><!-- /.modal-dialog -->
-              </div><!-- /.modal -->
-          <div class="col-sm-6 col-md-3" data-toggle="modal" data-target="#modal-chang">
-            <div class="team-member text-center">
-              <img src="img/about-our-team-03chang.jpg">
-              <h5 class="name">Joseph Chang</h5>
-              <h5 class="title">Director, Transfer Pricing</h5>
-            </div>
-          </div><!--/.col -->
-              <!-- Modal -->
-              <div class="modal fade" id="modal-chang" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
-                <div class="modal-dialog">
-                  <div class="modal-content">
-                      <div class="modal-header">
-                        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
-                        <h4 class="modal-title" id="myModalLabel">Joseph Chang, Director, Transfer Pricing</h4>
-                      </div>
-                      <div class="modal-body">
-                        <div class="pull-left mugshot">
-                          <img src="img/about-our-team-03chang.jpg">
-                          <a class="linkedin" target="_blank" href="http://linkedin.com/in/sagentmanagement">
-                            <img src="img/s-linkedin.png" />
-                          </a>
-                        </div>
-                        <p>Joseph Chang is a finance expert with in-depth experience at top accounting consultancies KPMG, PricewaterhouseCoopers and Deloitte &amp; Touche, as well as online travel leader Orbitz.com.</p>
-                        <p>Chang specializes in financial modeling and analysis, business valuation and industry research to determine the most appropriate pricing of goods and services in a broad range of industries. His broad background includes leading business development and sales activities resulting in annual revenues of $500 million. He has also led cross-functional teams on projects grossing more than $200,000.</p>
-                        <p>Chang holds a master’s of business administration from the Yale School of Management with concentrations in strategy and corporate finance, and a bachelor’s of arts in economics, with honors, from The University of Chicago.</p>
-                        
-                      </div>
-                  </div><!-- /.modal-content -->
-                </div><!-- /.modal-dialog -->
-              </div><!-- /.modal -->
-          <div class="col-sm-6 col-md-3" data-toggle="modal" data-target="#modal-giang">
-            <div class="team-member text-center">
-              <img src="img/about-our-team-05giang.jpg">
-              <h5 class="name">Amy Giang</h5>
-              <h5 class="title">Director, Accounting</h5>
-            </div>
-          </div><!--/.col -->
-              <!-- Modal -->
-              <div class="modal fade" id="modal-giang" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
-                <div class="modal-dialog">
-                  <div class="modal-content">
-                      <div class="modal-header">
-                        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
-                        <h4 class="modal-title" id="myModalLabel">Amy Giang, Director, Accounting</h4>
-                      </div>
-                      <div class="modal-body">
-                        <div class="pull-left mugshot">
-                          <img src="img/about-our-team-05giang.jpg">
-                          <a class="linkedin" target="_blank" href="http://linkedin.com/in/sagentmanagement">
-                            <img src="img/s-linkedin.png" />
-                          </a>
-                        </div>
-                        <p>Amy Giang is an accounting director overseeing the accounting department for Sagent Management’s client. Her responsibilities include managing multiple accounting teams that provide bookkeeping and preparation of consolidated financial statements. She consults on technical accounting issues and prepares investor reporting for various clients.</p>
-                        <p>Prior to Sagent, Giang assisted in directing financial management functions including development of monthly and quarterly financial statements, financial forecasts and budgets for Central City Association of Los Angeles, a business membership organization representing over 450 businesses, trade associations and non-profits. She also has experience leading internal audits to ensure regulatory compliance and operational efficiency and accuracy.</p>
-                        <p>Giang graduated from California State Polytechnic University, Pomona, with a bachelor’s of science degree in finance, real estate and law with specialization in finance.</p>
-                        
-                      </div>
-                  </div><!-- /.modal-content -->
-                </div><!-- /.modal-dialog -->
-              </div><!-- /.modal -->
-          <div class="col-sm-6 col-md-3 col-md-push-3" data-toggle="modal" data-target="#modal-karner">
-            <div class="team-member text-center">
-              <img src="img/about-our-team-06karner.jpg">
-              <h5 class="name">Derrick Karner</h5>
-              <h5 class="title">Director, Tax</h5>
-            </div>
-          </div><!--/.col -->
-              <!-- Modal -->
-              <div class="modal fade" id="modal-karner" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
-                <div class="modal-dialog">
-                  <div class="modal-content">
-                      <div class="modal-header">
-                        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
-                        <h4 class="modal-title" id="myModalLabel">Derrick Karner, Director, Tax</h4>
-                      </div>
-                      <div class="modal-body">
-                        <div class="pull-left mugshot">
-                          <img src="img/about-our-team-06karner.jpg">
-                          <a class="linkedin" target="_blank" href="http://linkedin.com/in/sagentmanagement">
-                            <img src="img/s-linkedin.png" />
-                          </a>
-                        </div>
-                        <p>Derrick Karner specializes in handling financial and tax consulting projects for clients, ensuring their programs and statutory filings comply with all applicable laws and regulations. Analyzing clients' financial records, he translates the data and addresses the tax issues, while also advising clients on their options for managing complex tax matters. Karner specializes in start-up corporate tax matters and also heads the individual tax practice for the firm's high net worth clients.</p>
-                        <p>Karner is a dynamic and motivated professional who has a bachelor’s degree in business economics with emphasis in accounting from University of California, Santa Barbara. He formerly worked at PricewaterhouseCoopers, where he acquired valuable experience managing clients’ tax returns and tax issues.</p>
-                        
-                      </div>
-                  </div><!-- /.modal-content -->
-                </div><!-- /.modal-dialog -->
-              </div><!-- /.modal -->
-          <div class="col-sm-6 col-md-3 col-md-push-3" data-toggle="modal" data-target="#modal-lee">
-            <div class="team-member text-center">
-              <img src="img/about-our-team-07lee.jpg">
-              <h5 class="name">SonYong Lee</h5>
-              <h5 class="title">Director, Tax</h5>
-            </div>
-          </div><!--/.col -->
-              <!-- Modal -->
-              <div class="modal fade" id="modal-lee" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
-                <div class="modal-dialog">
-                  <div class="modal-content">
-                      <div class="modal-header">
-                        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
-                        <h4 class="modal-title" id="myModalLabel">SonYong Lee, Director, Tax</h4>
-                      </div>
-                      <div class="modal-body">
-                        <div class="pull-left mugshot">
-                          <img src="img/about-our-team-07lee.jpg">
-                          <a class="linkedin" target="_blank" href="http://linkedin.com/in/sagentmanagement">
-                            <img src="img/s-linkedin.png" />
-                          </a>
-                        </div>
-                        <p>SonYong Lee is a tax director of corporate taxes at Sagent Management. Lee is in charge of federal and state tax compliance, income tax provision, and tax research. Lee also provides consulting from the U.S. and international tax perspectives.</p>
-                        <p>Prior to joining Sagent, Lee worked at Deloitte Tax in the Large Corporate Tax Group, where she was extensively involved in assisting Fortune 500 companies in meeting their tax filings and reporting requirements. She also worked at Arthur Andersen in the Transfer Pricing Group, assisting multinational corporations with the arm’s length pricing of their intercompany transactions.</p>
-                        <p>Lee graduated with a bachelor of arts degree in International Relations from Stanford University and a master of science in Taxation from DePaul University. Lee is a licensed Certified Public Accountant in the state of Illinois.</p>
-                        
-                      </div>
-                  </div><!-- /.modal-content -->
-                </div><!-- /.modal-dialog -->
-              </div><!-- /.modal -->
-          <div class="col-sm-6 col-md-3 col-md-push-3" data-toggle="modal" data-target="#modal-stolmeier">
-            <div class="team-member text-center">
-              <img src="img/about-our-team-08stolmeier.jpg">
-              <h5 class="name">Nicole Stolmeier</h5>
-              <h5 class="title">Director, Accounting</h5>
-            </div>
-          </div><!--/.col -->
-              <!-- Modal -->
-              <div class="modal fade" id="modal-stolmeier" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
-                <div class="modal-dialog">
-                  <div class="modal-content">
-                      <div class="modal-header">
-                        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
-                        <h4 class="modal-title" id="myModalLabel">Nicole Stolmeier, Director, Accounting</h4>
-                      </div>
-                      <div class="modal-body">
-                        <div class="pull-left mugshot">
-                          <img src="img/about-our-team-08stolmeier.jpg">
-                          <a class="linkedin" target="_blank" href="http://linkedin.com/in/sagentmanagement">
-                            <img src="img/s-linkedin.png" />
-                          </a>
-                        </div>
-                        <p>Nicole Stolmeier is an accounting director overseeing the accounting department for Sagent Management’s client. Her responsibilities include supervising multiple accounting teams that handle bookkeeping and preparation of consolidated financial statements. Stolmeier consults on technical accounting issues and also prepares investor reporting for various clients.</p>
-                        <p>Stolmeier brings strong finance and accounting experience to Sagent’s accounting department from her previous positions. Most recently, Stolmeier was an external financial auditor for a local firm in Illinois reviewing financial statements. She also implemented accounting and management systems for clients to improve reporting. In other positions, Stolmeier has trained staff and implemented internal controls and workflows for new accounting functions.</p>
-                        <P>Stolmeier holds a master’s degree in accounting from St. Ambrose University and a bachelor’s of science degree in business – accounting from the University of Phoenix. She is also a certified public accountant registered in the state of California.</P>
-                      </div>
-                  </div><!-- /.modal-content -->
-                </div><!-- /.modal-dialog -->
-              </div><!-- /.modal -->
-        </div><!--/.row-->
-      </div><!--/.container-->
-    </div><!--/.team-->
+        </div><!--/.col -->
+      </div>
+    </div>
+<script type="text/javascript">
+$(document).ready(function() {
+  var memberHeight = $('.members').height();
+  $('.bios').css('height',memberHeight);
+
+  $('.member').click(function() {
+    $('.member').removeClass('active');
+    $(this).addClass('active');
+    var memberName = $('.name',this).html();
+    memberName = '<h3>'+memberName+'</h3>';
+    var memberBio = $('.bio', this).html();
+    var biosWidth = $('.bios').width() + 30;
+    $(".bios").bind("transitionend webkitTransitionEnd oTransitionEnd MSTransitionEnd", function(){ 
+      $('.bios').html(memberName + memberBio).css('left','0');
+    });
+    $('.bios').css('left',biosWidth);
+//    $('.bios').html(bio).css('left','0');
+//    $('.bios').hide("slide", { direction: "right" }, 1000);
+  })
+});
+</script>
+
+
+
+
+
 
     <div id="push"></div>
 
@@ -530,54 +266,48 @@
 
 
   <div class="footer">
+    <div class="footer-wrap">
       <div class="container">
           <div class="row">
-              <div class="col-md-3 col-sm-6">
-                  <h4>Contact Us</h4>
-                  <p>Have questions?<br/>
-                  Want a Quote?<br/>
-                  Feedback?</p>
-                  <p><a href="mailto:bobboyen@yahoo.com"><span class="glyphicon glyphicon-envelope"></span>&nbsp;bobboyen@yahoo.com</a></p>
-                  <p><a href="tel:4158304113"><span class="glyphicon glyphicon-earphone"></span>&nbsp;(415) 830-4113</a></p>
+              <div class="col-md-5 col-md-offset-1 col-sm-6">
+                  <h3>Contact Us:</h3>
+                  <p><span class="glyphicon glyphicon-phone-alt"></span>&nbsp;<b>Phone</b><br/>
+                    <a href="tel:4158304113">&#43;1 (415) 830-4113</a><br/>
+                    <a href="tel:4158304113">&#43;65 1234 56 789</a>
+                  </p>
+                  <p><span class="glyphicon glyphicon-envelope"></span>&nbsp;<b>Email</b><br/>
+                    <a href="mailto:bobboyen@yahoo.com">bobboyen@yahoo.com</a>
+                  </p>
+                  
               </div>
-              <div class="col-md-3 col-sm-6">
-                  <h4>Services</h4>
-                  <ul class="footer_menu">
-                    <li><a href="" >Financial Services</a></li>
-                    <li><a href="" >Tax Outsourcing</a></li>
-                    <li><a href="" >Consulting</a></li>
-                  </ul>
-              </div>
-              <div class="clearfix visible-sm"></div>
-              <div class="col-md-3 col-sm-6 social-icons">
-                  <h4>Find us on</h4>
-                  <a target="_blank" href="http://linkedin.com/in/sagentmanagement">
-                    <img src="img/s-linkedin.png" />
-                  </a>
-                  <a target="_blank" href="http://twitter.com/sagentmanagement">
-                    <img src="img/s-twitter.png" />
-                  </a>
-              </div>
-            <form action="" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" target="_blank">
-              <div class="col-md-3 col-sm-6">
-                  <h4>Newsletter</h4>
+              <div class="col-md-5 col-sm-6">
+                  <h3>Send a Note:</h3>
                   <form role="form">
-                      <input type="email" class="form-control" placeholder="Email address">
-                      <button class="btn btn-primary btn-block">Sign Up</button>
-                  </form>
-                  <p>Sign up to get updates and other great information.</p>
+                    <div class="row">
+                      <div class="col-sm-6">
+                         <input type="text" id="contactFormName" class="form-control" placeholder="Name:" />
+                      </div>
+                      <div class="col-sm-6">
+                        <input type="email" id="contactFormPhone" class="form-control" placeholder="Phone:" />
+                      </div>
+                    </div>
+                    <input type="email" id="contactFormEmail" class="form-control" placeholder="Email:" />
+                    <textarea id="contactFormMessage" class="form-control" rows="6" placeholder="Message:"></textarea>
+                    <button class="btn pull-right">Submit</span></button>
+                  </form>                  
               </div>
           </div><!-- /.row -->
           <div class="row">
-              <hr class="transparent-white"/>
+              <hr/>
           </div><!-- /.row -->
           <div class="row">
               <div class="col-md-12 text-center credit">
-                  Designed by <a href="http://supersimplegames.net">Super Simple Games LLC.</a> | Copyright Sagent Mangement LLC, 2014
+                  Copyright Sagent Mangement LLC, 2014 | Designed by <a href="http://supersimplegames.net">Super Simple Games LLC.</a>
                   <br/>
               </div>
           </div><!-- /.row -->
       </div><!-- /.container -->
+    </div>
   </div> <!-- /.footer -->
 
 

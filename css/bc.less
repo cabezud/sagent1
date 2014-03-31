@@ -1,0 +1,292 @@
+@color-blue: #003879;
+@color-light-blue: #88B3D1;
+@color-red: #B31213;
+@import url(http://fonts.googleapis.com/css?family=Bitter);
+@font-face {
+    font-family: 'OpenSans-ExtraBold';
+    src: url('../fonts/OpenSans-ExtraBold-webfont.eot');
+    src: url('../fonts/OpenSans-ExtraBold-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/OpenSans-ExtraBold-webfont.woff') format('woff'),
+         url('../fonts/OpenSans-ExtraBold-webfont.ttf') format('truetype'),
+         url('../fonts/OpenSans-ExtraBold-webfont.svg#OpenSans-ExtraBold') format('svg');
+}
+@font-face {
+    font-family: 'OpenSans-Bold';
+    src: url('../fonts/OpenSans-Bold-webfont.eot');
+    src: url('../fonts/OpenSans-Bold-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/OpenSans-Bold-webfont.woff') format('woff'),
+         url('../fonts/OpenSans-Bold-webfont.ttf') format('truetype'),
+         url('../fonts/OpenSans-Bold-webfont.svg#OpenSans-Bold') format('svg');
+    font-weight: bold;
+    font-style: bold;
+}
+@font-face {
+    font-family: 'OpenSans-BoldItalic';
+    src: url('../fonts/OpenSans-BoldItalic-webfont.eot');
+    src: url('../fonts/OpenSans-BoldItalic-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/OpenSans-BoldItalic-webfont.woff') format('woff'),
+         url('../fonts/OpenSans-BoldItalic-webfont.ttf') format('truetype'),
+         url('../fonts/OpenSans-BoldItalic-webfont.svg#OpenSans-BoldItalic') format('svg');
+    font-weight: bold-italic;
+    font-style: bold-italic;
+}
+@font-face {
+    font-family: 'OpenSans-ExtraBoldItalic';
+    src: url('../fonts/OpenSans-ExtraBoldItalic-webfont.eot');
+    src: url('../fonts/OpenSans-ExtraBoldItalic-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/OpenSans-ExtraBoldItalic-webfont.woff') format('woff'),
+         url('../fonts/OpenSans-ExtraBoldItalic-webfont.ttf') format('truetype'),
+         url('../fonts/OpenSans-ExtraBoldItalic-webfont.svg#OpenSans-ExtraBoldItalic') format('svg');
+}
+@font-face {
+    font-family: 'OpenSans-Light';
+    src: url('../fonts/OpenSans-Light-webfont.eot');
+    src: url('../fonts/OpenSans-Light-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/OpenSans-Light-webfont.woff') format('woff'),
+         url('../fonts/OpenSans-Light-webfont.ttf') format('truetype'),
+         url('../fonts/OpenSans-Light-webfont.svg#OpenSans-Light') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+html, body {
+  height: 100%;
+}
+body {
+  font-size: 16px;
+  font-family: 'OpenSans-Light', sans-serif;
+}
+a { color: @color-blue; }
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'OpenSans-Bold', sans-serif;  
+}
+.transparent-white-bg {
+    background: rgb(255, 255, 255) transparent; 
+    background: rgba(255, 255, 255, 0.5);
+}
+.transparent-black-bg {
+    background: rgb(0, 0, 0) transparent;
+    background: rgba(0, 0, 0, 0.3);
+}
+.transparent-blue-bg {
+  background: rgba(0, 56, 121, .3);
+}
+ul {
+  list-style: none;
+  padding-left: 0px;
+}
+
+/************** Homepage ***************/
+.navbar {
+  background-color: white;
+  .transparent-white-bg;
+  background: rgba(255, 255, 255, 0.9);
+  height: 70px;
+  -webkit-box-shadow: 0 8px 6px -6px black;
+  box-shadow: 0 8px 6px -6px black;
+  font-size: 14px;
+}
+.navbar-brand, .navbar-right, .navbar-right li a {
+  height: 70px;
+}
+.navbar-nav>li>a {
+  padding-top: 25px;
+}
+.navbar-brand img {
+  height: 100%;
+}
+
+.billboard {
+  margin-top: 70px;
+  background: url("../img/t-25px.jpg") no-repeat center center; 
+  background-size: cover;
+  min-height: 300px;
+  position: relative;
+  padding-top: 50px;
+  padding-bottom: 50px;
+  .headline { 
+    font-family: 'Bitter', serif; 
+    color: white;
+    letter-spacing: 3px;
+    .off-color { color: @color-light-blue; }
+    line-height: 36px;
+  }
+  .tagline { 
+    font-family: 'Nunito', sans-serif, 300;
+    font-weight: light;
+    font-style: light;
+    color: white;
+    line-height: 28px;
+  }
+  a {
+    margin-top: 20px;
+    background-color: @color-blue;
+    border: none;
+    border-radius: 1px;
+    color: white;
+    padding: 15px 30px;
+    -webkit-transition: 0.5s;
+    -moz-transition: 0.5s;
+    &:hover { background-color: @color-light-blue; color: white; }
+  }
+}
+.super-title {
+  margin-top: 25px;
+  margin-bottom: 40px;
+  letter-spacing: 7px;
+  color: @color-blue;
+  font-family: 'Bitter', serif;
+}
+
+/* Difference *******************************************************/
+.difference1 {
+  .transparent-blue-bg;
+  padding-top: 25px;
+  padding-bottom: 30px;
+  .super-title { 
+    color: white; 
+  }
+  .row {
+    margin-bottom: 30px;
+  }
+  h3, p { display: inline; }
+  .super-point {
+    float: right;
+    font-family: 'OpenSans-BoldItalic', sans-serif;
+    font-size: 20px;
+    color: @color-red;
+  }
+}
+.number-me {
+  color: white;
+  font-size: 40px;
+  font-family: 'OpenSans-Bold', sans-serif;
+  border-right: 7px solid white;
+}
+
+/* Services *******************************************************/
+.services1 { 
+  padding-bottom: 30px;
+  //.transparent-blue-bg;
+}
+.thumbnail {
+  //.transparent-blue-bg;
+  padding: 5px 15px;
+  border: 2px solid @color-blue;
+  .btn {
+    position: absolute;
+    bottom: 5px;
+    right: 30px;
+    //color: white;
+    border: 1px solid @color-red;
+    &:hover {
+      background-color: @color-blue;
+      color: white;
+    }
+  }
+}
+.thumbnail-divider {
+  position: relative;
+  &:before {
+  content: "";
+  display: block;  
+  border-top: solid 1px black;  
+  width: 100%; 
+  height: 1px;  
+  position: absolute;  
+  top: 50%;  
+  z-index: 1;  
+  }
+  span {
+    background: white;
+    padding: 0 20px;
+    position: relative;
+    z-index: 5;
+  }
+}
+
+/* Team *******************************************************/
+.team1 { 
+  margin-top: 15px;
+  padding-bottom: 30px;
+}
+.members {
+  color: @color-blue;
+  .member {
+    padding-top: 15px;
+  }
+  h4, h5 {
+    margin: 0px;
+  }
+  img {
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .active {
+//    box-shadow:         inset 0 0 100px @color-blue;
+    //background-color: rgba(0, 56, 121, .5);
+    .transparent-blue-bg;
+    border-radius: 10px;
+  }
+}
+.bio { display: none; }
+.bios-col {padding-right: 0px;}
+.bios {
+  min-height: 300px;
+  .transparent-blue-bg;
+  border-radius: 5px 0px 0px 5px;
+  //color: white;
+  padding: 5px 30px 10px 15px;
+  position: relative;
+  left: 0px;
+  -webkit-transition-duration: 0.6s;
+  transition-duration: 0.6s;
+  .linkedin:hover img {
+    border: 2px solid white;
+    border-radius: 17px;
+  }
+}
+
+
+/* Footer *******************************************************/
+.footer {
+  background: url("../img/tree1024h.jpg") no-repeat center center;
+  background-size: cover; 
+  color: white;
+  width: 100%;
+  .footer-wrap {
+    .transparent-black-bg;
+    padding-top: 15px;
+    padding-bottom: 15px;
+  }
+  a { color: white; }
+  button {
+    background-color: white;
+    color: @color-blue;
+    padding-left: 30px;
+    padding-right: 30px;
+    &:hover {
+      color: white;
+      background-color: @color-blue;
+    }
+  }
+  b { font-family: 'OpenSans-Bold', sans-serif; }  
+}
+.footer .form-control {
+  background: none;
+  border: 2px solid white;
+  color: white;
+  font-size: 17px;
+  margin-bottom: 5px;
+  &::-webkit-input-placeholder { color: white; }
+  &:-moz-placeholder { color: white; }
+  &::-moz-placeholder { color: white; }
+  &::-ms-input-placeholder { color: white; }
+}
+.footer .credit, .footer hr {
+  color: gray;
+  font-size: 12px;
+  a { color: gray; }
+}
+#body-content-wrapper {
+  padding-bottom: 15px;
+}
