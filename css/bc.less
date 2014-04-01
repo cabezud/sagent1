@@ -48,6 +48,7 @@
     font-weight: normal;
     font-style: normal;
 }
+/************** Overrides ***************/
 html, body {
   height: 100%;
 }
@@ -59,6 +60,39 @@ a { color: @color-blue; }
 h1, h2, h3, h4, h5, h6 {
   font-family: 'OpenSans-Bold', sans-serif;  
 }
+ul {
+  list-style: none;
+  padding-left: 0px;
+}
+
+
+/************** Navbar ***************/
+body {
+  padding-top: 70px;
+}
+#top-navbar {
+  background-color: white;
+  .transparent-white-bg;
+  background: rgba(255, 255, 255, 0.9);
+  height: 70px;
+  -webkit-box-shadow: 0 8px 6px -6px black;
+  box-shadow: 0 8px 6px -6px black;
+  font-size: 14px;
+  .navbar-brand, .navbar-right, .navbar-right>li>a { 
+    height: 70px; 
+  }
+  .navbar-nav>li>a {
+    padding-top: 25px;
+    &.active, &:hover {
+      .transparent-blue-bg;
+    }
+  }
+  .navbar-brand img {
+    height: 100%;
+  }  
+}
+
+/************** Mixins ***************/
 .transparent-white-bg {
     background: rgb(255, 255, 255) transparent; 
     background: rgba(255, 255, 255, 0.5);
@@ -70,33 +104,23 @@ h1, h2, h3, h4, h5, h6 {
 .transparent-blue-bg {
   background: rgba(0, 56, 121, .3);
 }
-ul {
-  list-style: none;
-  padding-left: 0px;
+.super-title {
+  margin-top: 25px;
+  margin-bottom: 40px;
+  letter-spacing: 7px;
+  color: @color-blue;
+  font-family: 'Bitter', serif;
+}
+.tile {
+  border: 2px solid white;
+  border-radius: 4px;
+  box-shadow: 5px 5px 5px dimgray;
+  -webkit-box-shadow: 5px 5px 5px dimgray;
+  -moz-box-shadow: 5px 5px 5px dimgray;
 }
 
 /************** Homepage ***************/
-.navbar {
-  background-color: white;
-  .transparent-white-bg;
-  background: rgba(255, 255, 255, 0.9);
-  height: 70px;
-  -webkit-box-shadow: 0 8px 6px -6px black;
-  box-shadow: 0 8px 6px -6px black;
-  font-size: 14px;
-}
-.navbar-brand, .navbar-right, .navbar-right li a {
-  height: 70px;
-}
-.navbar-nav>li>a {
-  padding-top: 25px;
-}
-.navbar-brand img {
-  height: 100%;
-}
-
 .billboard {
-  margin-top: 70px;
   background: url("../img/t-25px.jpg") no-repeat center center; 
   background-size: cover;
   min-height: 300px;
@@ -129,21 +153,11 @@ ul {
     &:hover { background-color: @color-light-blue; color: white; }
   }
 }
-.super-title {
-  margin-top: 25px;
-  margin-bottom: 40px;
-  letter-spacing: 7px;
-  color: @color-blue;
-  font-family: 'Bitter', serif;
-}
-
-/* Difference *******************************************************/
-.difference1 {
-  .transparent-blue-bg;
+#difference {
   padding-top: 25px;
   padding-bottom: 30px;
   .super-title { 
-    color: white; 
+    color: @color-blue; 
   }
   .row {
     margin-bottom: 30px;
@@ -162,8 +176,37 @@ ul {
   font-family: 'OpenSans-Bold', sans-serif;
   border-right: 7px solid white;
 }
+#testimonials {
+  .transparent-blue-bg;
+}
 
 /* Services *******************************************************/
+#services-overview {
+  padding-top: 15px;
+  padding-bottom: 15px;
+  .transparent-blue-bg;
+}
+#services-nav {
+  top: 70px;
+  .navbar { min-height: 0px; }
+  z-index: 9999;
+  * { border-radius: 0px; }
+  .navbar {
+    .transparent-blue-bg;
+  }
+  li:hover>a, li.active>a {
+    .transparent-white-bg;
+    color: black;
+  }
+  li:nth-child(2) {
+    border-left: 1px solid white;
+    border-right: 1px solid white;
+  }
+}
+#services-financial, #services-tax, #services-consulting {
+  padding-top: 112px;
+}
+
 .services1 { 
   padding-bottom: 30px;
   //.transparent-blue-bg;
@@ -203,57 +246,50 @@ ul {
     z-index: 5;
   }
 }
-
-/* Team *******************************************************/
-.team1 { 
-  margin-top: 15px;
-  padding-bottom: 30px;
-}
-.members {
-  color: @color-blue;
-  .member {
-    padding-top: 15px;
+/* Who we are *******************************************************/
+#team {
+  .transparent-blue-bg;
+  .s-icon {
+    max-width: 32px;
+    position: absolute;
+    top: -5px;
+    margin-left: 10px;
   }
-  h4, h5 {
-    margin: 0px;
+  .col-sm-4 img {
+    .tile
+  }
+}
+
+/* Clients *******************************************************/
+#client-logos, #client-testimonials {
+  .transparent-blue-bg;
+}
+#client-logos img, #client-stories img, #client-testimonials img {
+  .tile
+}
+
+/* Contact *******************************************************/
+#contact-overview, #contact-us {
+  .transparent-blue-bg;
+}
+#contact-offices {
+  .office {
+    .transparent-blue-bg;
+    margin: 5px;
+    .tile;
   }
   img {
+    display: block;
     margin-left: auto;
     margin-right: auto;
   }
-  .active {
-//    box-shadow:         inset 0 0 100px @color-blue;
-    //background-color: rgba(0, 56, 121, .5);
-    .transparent-blue-bg;
-    border-radius: 10px;
-  }
 }
-.bio { display: none; }
-.bios-col {padding-right: 0px;}
-.bios {
-  min-height: 300px;
-  .transparent-blue-bg;
-  border-radius: 5px 0px 0px 5px;
-  //color: white;
-  padding: 5px 30px 10px 15px;
-  position: relative;
-  left: 0px;
-  -webkit-transition-duration: 0.6s;
-  transition-duration: 0.6s;
-  .linkedin:hover img {
-    border: 2px solid white;
-    border-radius: 17px;
-  }
-}
-
-
-/* Footer *******************************************************/
-.footer {
-  background: url("../img/tree1024h.jpg") no-repeat center center;
+#contact-us {
+  background: url("/img/t-25px.jpg") no-repeat center center;
   background-size: cover; 
   color: white;
   width: 100%;
-  .footer-wrap {
+  .contact-us-wrap {
     .transparent-black-bg;
     padding-top: 15px;
     padding-bottom: 15px;
@@ -271,7 +307,7 @@ ul {
   }
   b { font-family: 'OpenSans-Bold', sans-serif; }  
 }
-.footer .form-control {
+#contact-us .form-control {
   background: none;
   border: 2px solid white;
   color: white;
@@ -282,6 +318,8 @@ ul {
   &::-moz-placeholder { color: white; }
   &::-ms-input-placeholder { color: white; }
 }
+
+/* Footer *******************************************************/
 .footer .credit, .footer hr {
   color: gray;
   font-size: 12px;
