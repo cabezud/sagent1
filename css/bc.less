@@ -1,7 +1,26 @@
+//Ostrich, oswald, porter-sans-inline-block, quicksand-regular, blackout-midnight
 @color-blue: #003879;
 @color-light-blue: #88B3D1;
+@color-polo-blue: #B2C2D6;
+@color-light-polo-blue: #D6E3EB;
+@color-other-blue: #95A4B6;
 @color-red: #B31213;
+.test-1 { font-size: 20px; background-color: @color-blue; }
+.test-2 { font-size: 20px; background-color: @color-light-blue; }
+.test-3 { font-size: 20px; background-color: @color-polo-blue; }
+.test-4 { font-size: 20px; background-color: @color-light-polo-blue; }
+.test-5 { font-size: 20px; background-color: @color-other-blue; }
+.test-6 { font-size: 20px; background-color: @color-red; }
+
 @import url(http://fonts.googleapis.com/css?family=Bitter);
+@font-face {
+    font-family: 'quicksand-regular';
+    src: url('../fonts/quicksand-regular-webfont.eot');
+    src: url('../fonts/quicksand-regular-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/quicksand-regular-webfont.woff') format('woff'),
+         url('../fonts/quicksand-regular-webfont.ttf') format('truetype'),
+         url('../fonts/quicksand-regular-webfont.svg#quicksand-regular') format('svg');
+}
 @font-face {
     font-family: 'OpenSans-ExtraBold';
     src: url('../fonts/OpenSans-ExtraBold-webfont.eot');
@@ -39,6 +58,14 @@
          url('../fonts/OpenSans-ExtraBoldItalic-webfont.svg#OpenSans-ExtraBoldItalic') format('svg');
 }
 @font-face {
+    font-family: 'OpenSans-Regular';
+    src: url('../fonts/OpenSans-Regular-webfont.eot');
+    src: url('../fonts/OpenSans-Regular-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/OpenSans-Regular-webfont.woff') format('woff'),
+         url('../fonts/OpenSans-Regular-webfont.ttf') format('truetype'),
+         url('../fonts/OpenSans-Regular-webfont.svg#OpenSans-Regular') format('svg');
+}
+@font-face {
     font-family: 'OpenSans-Light';
     src: url('../fonts/OpenSans-Light-webfont.eot');
     src: url('../fonts/OpenSans-Light-webfont.eot?#iefix') format('embedded-opentype'),
@@ -48,23 +75,73 @@
     font-weight: normal;
     font-style: normal;
 }
+.css-test {
+  h1:nth-of-type(1), p:nth-of-type(1) { font-family: 'OpenSans-ExtraBold'; }
+  h1:nth-of-type(2), p:nth-of-type(2) { font-family: 'OpenSans-Bold'; }
+  h1:nth-of-type(3), p:nth-of-type(3) { font-family: 'OpenSans-BoldItalic'; }
+  h1:nth-of-type(4), p:nth-of-type(4) { font-family: 'OpenSans-ExtraBoldItalic'; }
+  h1:nth-of-type(5), p:nth-of-type(5) { font-family: 'OpenSans-Light'; }
+  h1:nth-of-type(6), p:nth-of-type(6) { font-family: 'OpenSans-Regular'; }
+  h1:nth-of-type(7), p:nth-of-type(7) { font-family: 'quicksand-regular'; }
+  h1:nth-of-type(8), p:nth-of-type(8) { font-family: 'Nunito', sans-serif, 300; }
+  h1:nth-of-type(9), p:nth-of-type(9) { font-family: 'Krona One'; }
+  h1:nth-of-type(10), p:nth-of-type(10) { font-family: 'Archivo Black'; }
+  h1:nth-of-type(11), p:nth-of-type(11) { font-family: 'Bitter'; }
+}
+
+/************** Mixins ***************/
+.transparent-white-bg {
+    background: rgb(255, 255, 255) transparent; 
+    background: rgba(255, 255, 255, 0.5);
+}
+.transparent-black-bg {
+    background: rgb(0, 0, 0) transparent;
+    background: rgba(0, 0, 0, 0.3);
+}
+.transparent-blue-bg {
+  background: rgba(0, 56, 121, .3);
+}
+.super-title {
+  margin-top: 25px;
+  margin-bottom: 40px;
+  letter-spacing: 6px;
+  font-family: 'Bitter', serif;
+}
+.tile {
+  border: 2px solid white;
+  border-radius: 4px;
+  box-shadow: 5px 5px 5px dimgray;
+  -webkit-box-shadow: 5px 5px 5px dimgray;
+  -moz-box-shadow: 5px 5px 5px dimgray;
+}
+.button-nice {
+  background-color: @color-blue;
+  border: none;
+  border-radius: 1px;
+  color: white;
+  padding: 12px 30px;
+  -webkit-transition: 0.5s;
+  -moz-transition: 0.5s;
+  &:hover { background-color: @color-light-blue; color: white; }
+}
+
 /************** Overrides ***************/
 html, body {
   height: 100%;
 }
 body {
-  font-size: 16px;
-  font-family: 'OpenSans-Light', sans-serif;
+  font-size: 13px;
+  font-family: 'OpenSans-Regular', sans-serif;
 }
 a { color: @color-blue; }
 h1, h2, h3, h4, h5, h6 {
-  font-family: 'OpenSans-Bold', sans-serif;  
+  font-family: 'Bitter', sans-serif;  
 }
 ul {
   list-style: none;
   padding-left: 0px;
 }
-
+.btn-primary { .button-nice; }
 
 /************** Navbar ***************/
 body {
@@ -72,8 +149,6 @@ body {
 }
 #top-navbar {
   background-color: white;
-  .transparent-white-bg;
-  background: rgba(255, 255, 255, 0.9);
   height: 70px;
   -webkit-box-shadow: 0 8px 6px -6px black;
   box-shadow: 0 8px 6px -6px black;
@@ -92,33 +167,6 @@ body {
   }  
 }
 
-/************** Mixins ***************/
-.transparent-white-bg {
-    background: rgb(255, 255, 255) transparent; 
-    background: rgba(255, 255, 255, 0.5);
-}
-.transparent-black-bg {
-    background: rgb(0, 0, 0) transparent;
-    background: rgba(0, 0, 0, 0.3);
-}
-.transparent-blue-bg {
-  background: rgba(0, 56, 121, .3);
-}
-.super-title {
-  margin-top: 25px;
-  margin-bottom: 40px;
-  letter-spacing: 7px;
-  color: @color-blue;
-  font-family: 'Bitter', serif;
-}
-.tile {
-  border: 2px solid white;
-  border-radius: 4px;
-  box-shadow: 5px 5px 5px dimgray;
-  -webkit-box-shadow: 5px 5px 5px dimgray;
-  -moz-box-shadow: 5px 5px 5px dimgray;
-}
-
 /************** Homepage ***************/
 .billboard {
   background: url("../img/t-25px.jpg") no-repeat center center; 
@@ -135,56 +183,67 @@ body {
     line-height: 36px;
   }
   .tagline { 
-    font-family: 'Nunito', sans-serif, 300;
+    font-family: 'OpenSans-Regular';
     font-weight: light;
     font-style: light;
     color: white;
-    line-height: 28px;
+    font-size: 16px;
+    line-height: 20px;
   }
   a {
     margin-top: 20px;
-    background-color: @color-blue;
-    border: none;
-    border-radius: 1px;
-    color: white;
-    padding: 15px 30px;
-    -webkit-transition: 0.5s;
-    -moz-transition: 0.5s;
-    &:hover { background-color: @color-light-blue; color: white; }
+    .button-nice;
   }
 }
 #difference {
   padding-top: 25px;
   padding-bottom: 30px;
   .super-title { 
-    color: @color-blue; 
+    color: black;
+    .accent-color { color: @color-red; } 
   }
-  .row {
+  .row.numbered-row {
     margin-bottom: 30px;
-  }
-  h3, p { display: inline; }
-  .super-point {
-    float: right;
-    font-family: 'OpenSans-BoldItalic', sans-serif;
-    font-size: 20px;
-    color: @color-red;
+    .number-me {
+      color: @color-blue;
+      font-size: 40px;
+      font-family: 'OpenSans-Light', sans-serif;
+      border-right: 2px solid @color-blue;
+    }
+    h4 { 
+      margin: 0px;
+      font-family: 'OpenSans-Bold', sans-serif;
+    }
   }
 }
-.number-me {
-  color: white;
-  font-size: 40px;
-  font-family: 'OpenSans-Bold', sans-serif;
-  border-right: 7px solid white;
+.container-fluid.no-gutters {
+  padding: 0px;
+  >.row {
+    margin: 0px;
+    >div { margin: 0px; background-color: green; }
+  }
+  blockquote { margin-bottom: 0px; }
 }
 #testimonials {
-  .transparent-blue-bg;
+  background-color: @color-other-blue;
+  .left, .right { padding-top: 20px; padding-bottom: 20px; }
+  .left { background-color: @color-other-blue; }
+  .right { background-color: @color-polo-blue; }
+  p { 
+    text-align: right;
+    margin-top: 30px;
+  }
+}
+.attribution {
+  text-align: right;
+  padding-right: 30px;
 }
 
 /* Services *******************************************************/
 #services-overview {
   padding-top: 15px;
   padding-bottom: 15px;
-  .transparent-blue-bg;
+  background-color: @color-other-blue;
 }
 #services-nav {
   top: 70px;
@@ -192,10 +251,10 @@ body {
   z-index: 9999;
   * { border-radius: 0px; }
   .navbar {
-    .transparent-blue-bg;
+    background-color: @color-light-polo-blue;
   }
   li:hover>a, li.active>a {
-    .transparent-white-bg;
+    background-color: @color-polo-blue;
     color: black;
   }
   li:nth-child(2) {
@@ -320,7 +379,15 @@ body {
 }
 
 /* Footer *******************************************************/
-.footer .credit, .footer hr {
+.footer { 
+  background-color: darkgray; 
+  padding: 12px 30px;
+  .footer-wrap {
+    border-top: 1px solid gray;
+    padding-top: 7px;
+  }
+}
+.footer .credit {
   color: gray;
   font-size: 12px;
   a { color: gray; }

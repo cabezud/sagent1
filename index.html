@@ -6,15 +6,19 @@
   <title>Sagent Management | Home</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="shortcut icon" type="img/ico" href="img/sangenticon.ico">
+<!--
   <link href='http://fonts.googleapis.com/css?family=Nunito:300' rel='stylesheet' type='text/css'>
   <link href='http://fonts.googleapis.com/css?family=Krona+One' rel='stylesheet' type='text/css'>
   <link href='http://fonts.googleapis.com/css?family=Archivo+Black' rel='stylesheet' type='text/css'>
+-->
   <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css" />
   <link rel="stylesheet/less" type="text/css" href="css/bc.less"/>
+
   <script src="js/less-1.7.0.min.js"></script>
-  <script src="http://code.jquery.com/jquery.js"></script>
+  <script src="js/jquery-1.10.2.min.js"></script>
   <script src="js/jquery-ui.min.js"></script>
   <script type="text/javascript" src="js/bootstrap.min.js"></script>
+  <script src="js/custom.js"></script>
 </head>
 <body>
   <div class="body-wrapper">
@@ -62,63 +66,65 @@
 
     <div class="container-fluid billboard">
       <div class="row">
-        <div class="col-md-8 col-md-offset-2">
+        <div class="col-sm-10 col-sm-offset-1">
           <h3 class="headline text-center">A GLOBAL <span class="off-color">CUSTOMIZED</span>, END-TO-END SUITE OF FINANCIAL, TAX &AMP; OPERATIONAL SERVICES</h3>
         </div>
       </div>
       <div class="row">
-        <div class="col-md-6 col-md-offset-3">          
+        <div class="col-sm-8 col-sm-offset-2">          
           <p class="tagline text-center">Leverage our unique combination of local knowledge, regional connections and financial management expertise.</p>
-          <p class="text-center"><a href="#" class="btn" role="button">CONTACT US</a></p>
+          <p class="text-center"><a href="/contact.html" class="btn" role="button">CONTACT US</a></p>
         </div>
       </div>
     </div>
 
     <div class="container-fluid" id="difference">
-      <h1 class="super-title text-center">THE SAGENT DIFFERENCE</h1>
-      <div class="row">
+      <h1 class="super-title text-center">THE SAGENT <span class="accent-color">DIFFERENCE</span></h1>
+      <div class="row numbered-row">
         <div class="col-sm-1 col-sm-offset-1 text-center number-me">1</div>
         <div class="col-sm-9">
-          <h3>Gobal Knowledge. Local Service.</h3>
+          <h4>Gobal Knowledge. Local Service.</h4>
           <p>Our unique global structure, encompassing the USA (East and West coast), Israel and Taiwan, enables us to provide expert local services should you choose to expand your business within or to the USA, Israel or the Asia Pacific region.</p>
         </div>
       </div>
-      <div class="row">
+      <div class="row numbered-row">
         <div class="col-sm-1 col-sm-offset-1 text-center number-me">2</div>
         <div class="col-sm-9">
-          <h3>Broad ecosystem knowledge. Extensive network.</h3>
+          <h4>Broad ecosystem knowledge. Extensive network.</h4>
           <p>Working with Sagent, you have the best of both worlds, with access to our extensive connection base and global experience. Your company will benefit from our extensive management experience, ecosystem knowledge and worldwide network.</p>
         </div>
       </div>
-      <div class="row">
+      <div class="row numbered-row">
         <div class="col-sm-1 col-sm-offset-1 text-center number-me">3</div>
         <div class="col-sm-9">
-          <h3>Outsourced services. In-house approach.</h3>
+          <h4>Outsourced services. In-house approach.</h4>
           <p>Having been clients ourselves, we commit to being an extension of your team, supporting your growth and success and delivering ROI. We will advance your business anywhere from early stage through to that of a well-established organization.</p>
-          <div class="clearfix"></div>
-          <a href="/services" class="btn btn-primary pull-right">Read more</a>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-xs-12">
+          <p class="text-center"><a href="/services" class="btn btn-primary text-center">Read more</a></p>
         </div>
       </div>
     </div>
 
-    <div class="container-fluid" id="testimonials">
+    <div class="container-fluid no-gutters" id="testimonials">
       <div class="row">
-        <div class="col-sm-5 col-sm-push-1">
-          <blockquote>The team at Sagent is consistently spot on with its technical knowledge, subject matter expertise and strategic advice. What's more, they wrap this up with premium and personalized client service and always go the extra mile.</blockquote>
-          <div class="attribution pull-right">
-            <cite>- Hagi Schwartz</cite>
-            <div class="organization"> Venture Capitalist, Magnolia Capital and WTI</div>
-          </div>
-        </div>
-        <div class="clearfix visible-xs"></div>
-        <div class="col-sm-5 col-sm-push-1">
+        <div class="col-sm-6 left">
           <blockquote>We have relied on the Sagent team for expert guidance and execution on accounting, finance and tax matters both domestically and internationally. They have enabled us to focus on the business and build an internal team where appropriate. They have been great partners in every respect and along every step of the way.</blockquote>
-          <div class="attribution pull-right">
+          <div class="attribution">
             <cite>- Marc Friend</cite>
             <div class="organization">CFO, Intalio Inc.</div>
           </div>
-          <div class="clearfix"></div>
-          <a href="/clients" class="btn btn-primary pull-right">See our clients</a>
+        </div>
+        <div class="clearfix visible-xs"></div>
+        <div class="col-sm-6 right">
+          <blockquote>The team at Sagent is consistently spot on with its technical knowledge, subject matter expertise and strategic advice. What's more, they wrap this up with premium and personalized client service and always go the extra mile.</blockquote>
+          <div class="attribution">
+            <cite>- Hagi Schwartz</cite>
+            <div class="organization"> Venture Capitalist, Magnolia Capital and WTI</div>
+          </div>
+          <p><a href="/clients" class="btn btn-primary text-center">See our clients</a></p>
         </div>
       </div>
     </div>
@@ -131,9 +137,6 @@
     <div class="footer-wrap">
       <div class="container">
           <div class="row">
-              <hr/>
-          </div>
-          <div class="row">
               <div class="col-md-12 text-center credit">
                   Copyright Sagent Mangement LLC, 2014 | Designed by <a href="http://supersimplegames.net">Super Simple Games LLC.</a>
                   <br/>
@@ -142,31 +145,6 @@
       </div>
     </div>
   </div>
-
-
-<script type="text/javascript">
-$(document).ready(function() {
-
-  //STICKY FOOTER
-  var makeFooterSticky = function() {
-      $('#push').css('height','');
-      var vwptHeight = $(window).height();
-      var bodyHeight = $('.body-wrapper').outerHeight();
-      var footerHeight = $('.footer').outerHeight();
-      var newPushHeight = vwptHeight - bodyHeight - footerHeight;
-      if (newPushHeight > 0) {
-          $('#push').css('height',newPushHeight);    
-      };
-      console.log('vwpt / body / footer = new push height: '+vwptHeight+"/"+bodyHeight+"/"+footerHeight+"="+newPushHeight);
-  };
-  makeFooterSticky();
-  $( window ).bind('orientationchange resize', function() {
-    makeFooterSticky();
-  });
-
-});//document.ready
-
-</script>
 
 </body>
 </html>
