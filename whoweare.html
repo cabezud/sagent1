@@ -60,17 +60,46 @@
       </div><!-- /.container-fluid -->
     </nav>
 
-    <div class="container-fluid">
+    <div class="container-fluid" id="services-overview">
       <div class="row">
-        <div class="col-sm-10 col-sm-offset-1">
-          <p>Sagent Management is a global leader in Financial, Tax and Operational Services.</p>
-          <p>With over 100 professionals around the world – and growing – we have become trusted business partners to founders, investors, CEOs and CFOs of leading high-growth companies.</p>
-          <p>Our clients range from early-stage startups to Fortune 1000 companies that operate in high-tech, biotechnology, clean technology and other industries.</p>
-          <p>The Sagent team features professionals with vast global expertise and significant client-side experience.  Each of our lines of service (e.g. CFO Services, Accounting, Tax, Human Resources, Business Regulations & Operations, etc.) are led by a Worldwide Practice Director. </p>
-          <p>Further, we have built a global ecosystem of investors, vendors and other service providers that empower our clients to grow, both domestically and internationally.</p>
+        <div id="carouselWithText" class="carousel slide" data-ride="carousel" data-interval="7000">
+          <!-- Indicators -->
+          <ol class="carousel-indicators">
+            <li data-target="#carouselWithText" data-slide-to="0" class="active"></li>
+            <li data-target="#carouselWithText" data-slide-to="1"></li>
+            <li data-target="#carouselWithText" data-slide-to="2"></li>
+            <li data-target="#carouselWithText" data-slide-to="3"></li>
+            <li data-target="#carouselWithText" data-slide-to="4"></li>
+          </ol>
+          <!-- Wrapper for slides -->
+          <div class="carousel-inner">
+            <div class="item active">
+              <div class="item-content"><h3>Sagent Management is a global leader in Financial, Tax and Operational Services.</h3></div>
+            </div>
+            <div class="item">
+              <div class="item-content"><h3>With over 100 professionals around the world – and growing – we have become trusted business partners to founders, investors, CEOs and CFOs of leading high-growth companies.</h3></div>
+            </div>
+            <div class="item">
+              <div class="item-content"><h3>Our clients range from early-stage startups to Fortune 1000 companies that operate in high-tech, biotechnology, clean technology and other industries.</h3></div>
+            </div>
+            <div class="item">
+              <div class="item-content"><h3>The Sagent team features professionals with vast global expertise and significant client-side experience.  Each of our lines of service (e.g. CFO Services, Accounting, Tax, Human Resources, Business Regulations &amp; Operations, etc.) are led by a Worldwide Practice Director.</h3></div>
+            </div>
+            <div class="item">
+              <div class="item-content"><h3>Further, we have built a global ecosystem of investors, vendors and other service providers that empower our clients to grow, both domestically and internationally.</h3></div>
+            </div>
+          </div>
+          <!-- Controls 
+          <a class="left carousel-control" href="#carousel-example-generic" data-slide="prev">
+            <span class="glyphicon glyphicon-chevron-left"></span>
+          </a>
+          <a class="right carousel-control" href="#carousel-example-generic" data-slide="next">
+            <span class="glyphicon glyphicon-chevron-right"></span>
+          </a>-->
         </div>
       </div>
     </div>
+
 
     <div class="container-fluid">
       <h1 class="super-title text-center">OUR VISION</h1>
@@ -90,8 +119,10 @@
     <div class="container-fluid" id="team">
       <h1 class="super-title text-center">THE TEAM</h1>
       <div class="row">
-        <div class="col-sm-4 col-sm-push-1">
-          <img src="/img/yen.jpg" />
+        <div class="col-sm-3 col-sm-offset-1">
+          <div class="inner-tile">
+            <img alt="client logo" class="img-responsive" src="/img/oded.jpg" />
+          </div>
         </div>
         <div class="col-sm-7">
           <h4>Leo Yen<span><img class="s-icon" src="/img/s-linkedin.png"/></span></h4>
@@ -105,8 +136,10 @@
         </div>
       </div><!--/.row.bio-->
       <div class="row">
-        <div class="col-sm-4 col-sm-push-1">
-          <img src="/img/yen.jpg" />
+        <div class="col-sm-3 col-sm-offset-1">
+          <div class="inner-tile test">
+            <img alt="client logo" class="img-responsive" src="/img/oded.jpg" />
+          </div>
         </div>
         <div class="col-sm-7">
           <h4>Leo Yen</h4>
@@ -120,8 +153,10 @@
         </div>
       </div><!--/.row.bio-->
       <div class="row">
-        <div class="col-sm-4 col-sm-push-1">
-          <img src="/img/yen.jpg" />
+        <div class="col-sm-3 col-sm-offset-1">
+          <div class="inner-tile">
+            <img alt="client logo" class="img-responsive" src="/img/yen.jpg" />
+          </div>
         </div>
         <div class="col-sm-7">
           <h4>Leo Yen</h4>
@@ -144,9 +179,6 @@
     <div class="footer-wrap">
       <div class="container">
           <div class="row">
-              <hr/>
-          </div>
-          <div class="row">
               <div class="col-md-12 text-center credit">
                   Copyright Sagent Mangement LLC, 2014 | Designed by <a href="http://supersimplegames.net">Super Simple Games LLC.</a>
                   <br/>
@@ -155,31 +187,6 @@
       </div>
     </div>
   </div>
-
-
-<script type="text/javascript">
-$(document).ready(function() {
-
-  //STICKY FOOTER
-  var makeFooterSticky = function() {
-      $('#push').css('height','');
-      var vwptHeight = $(window).height();
-      var bodyHeight = $('.body-wrapper').outerHeight();
-      var footerHeight = $('.footer').outerHeight();
-      var newPushHeight = vwptHeight - bodyHeight - footerHeight;
-      if (newPushHeight > 0) {
-          $('#push').css('height',newPushHeight);    
-      };
-      console.log('vwpt / body / footer = new push height: '+vwptHeight+"/"+bodyHeight+"/"+footerHeight+"="+newPushHeight);
-  };
-  makeFooterSticky();
-  $( window ).bind('orientationchange resize', function() {
-    makeFooterSticky();
-  });
-
-});//document.ready
-
-</script>
 
 </body>
 </html>

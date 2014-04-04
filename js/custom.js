@@ -15,7 +15,6 @@ $(document).ready(function() {
   $( window ).bind('orientationchange resize', function() {
     makeFooterSticky();
   });
-
 	
 	var equalHeightColumns = function() {
 		var leftCol = $('.left').height();
@@ -30,4 +29,7 @@ $(document).ready(function() {
 	    equalHeightColumns();
 	});
 	equalHeightColumns();
+
+	var innerTileWidth = $('.inner-tile').width();
+	$('.inner-tile').height( innerTileWidth );
 });

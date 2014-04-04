@@ -102,8 +102,8 @@
   background: rgba(0, 56, 121, .3);
 }
 .super-title {
-  margin-top: 25px;
-  margin-bottom: 40px;
+  margin-top: 50px;
+  margin-bottom: 25px;
   letter-spacing: 6px;
   font-family: 'Bitter', serif;
 }
@@ -113,6 +113,29 @@
   box-shadow: 5px 5px 5px dimgray;
   -webkit-box-shadow: 5px 5px 5px dimgray;
   -moz-box-shadow: 5px 5px 5px dimgray;
+}
+.inner-tile {
+  margin-top: 15px;
+  margin-bottom: 15px;
+  background-color: white;
+  -moz-box-shadow:    inset 0 0 10px #000000;
+   -webkit-box-shadow: inset 0 0 10px #000000;
+   box-shadow:         inset 0 0 10px #000000;
+  //trick to make it square
+  width: 70%;
+  height: 0;
+  padding-bottom: 70%;
+  margin-left: 15%;
+  // vertically align image
+  position: relative;
+  img {
+    position: absolute;
+    max-width: 65%;
+    top: 50%;
+    left: 50%;
+    -webkit-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+  }
 }
 .button-nice {
   background-color: @color-blue;
@@ -124,7 +147,32 @@
   -moz-transition: 0.5s;
   &:hover { background-color: @color-light-blue; color: white; }
 }
-
+/*
+blockquote {
+  border: none;
+  background-image: url(/img/openquote.png) top left no-repeat;
+}
+*/
+blockquote {
+  border-left: 10px solid white;
+  margin: 1.5em 10px;
+  padding: 0.5em 10px;
+  quotes: "\201C""\201D""\2018""\2019";
+  border: none;
+}
+blockquote:before {
+  color: white;
+  content: open-quote;
+  font-family: 'Geneva';
+  font-size: 6em;
+  line-height: 0.1em;
+  margin-right: 0.1em;
+  vertical-align: -0.4em;
+}
+blockquote:after {
+  content: close-quote;
+  visibility: hidden;
+}
 /************** Overrides ***************/
 html, body {
   height: 100%;
@@ -142,6 +190,9 @@ ul {
   padding-left: 0px;
 }
 .btn-primary { .button-nice; }
+.dropdown-menu {
+  padding: 15px;
+}
 
 /************** Navbar ***************/
 body {
@@ -241,9 +292,23 @@ body {
 
 /* Services *******************************************************/
 #services-overview {
-  padding-top: 15px;
-  padding-bottom: 15px;
   background-color: @color-other-blue;
+  .item-content {
+    padding: 0px 15%;
+    color: white;
+    min-height: 350px;
+    display: table;
+    >* {
+      display: table-cell;
+      vertical-align: middle;
+      line-height: 1.5em;
+    }
+  }
+}
+@media (max-width: 768px) {
+  .item-content>* {
+    font-size: 18px;
+  }
 }
 #services-nav {
   top: 70px;
@@ -314,8 +379,9 @@ body {
     top: -5px;
     margin-left: 10px;
   }
-  .col-sm-4 img {
-    .tile
+  .inner-tile.test img {
+    max-width: 85%;
+    top: 63%;
   }
 }
 
@@ -323,19 +389,40 @@ body {
 #client-logos, #client-testimonials {
   .transparent-blue-bg;
 }
-#client-logos img, #client-stories img, #client-testimonials img {
-  .tile
+#client-logos {
+  padding-top: 30px;
+  padding-bottom: 30px;
+}
+#client-stories {
+  padding-bottom: 30px;
+  .inner-tile {
+    width: 100%;
+    height: 0;
+    padding-bottom: 100%;
+    margin-left: 0%;
+  }
 }
 
 /* Contact *******************************************************/
 #contact-overview, #contact-us {
   .transparent-blue-bg;
 }
+#contact-overview {
+  padding-top: 60px;
+  padding-bottom: 60px;
+  color: white;
+  h3, h4, h4 { line-height: 1.4em; }
+}
 #contact-offices {
+  padding-top: 45px;
+  padding-bottom: 45px;
   .office {
-    .transparent-blue-bg;
-    margin: 5px;
-    .tile;
+    background-color: @color-polo-blue;
+    margin-top: 15px;
+    margin-bottom: 15px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    border-radius: 2px;
   }
   img {
     display: block;
@@ -383,7 +470,7 @@ body {
   background-color: darkgray; 
   padding: 12px 30px;
   .footer-wrap {
-    border-top: 1px solid gray;
+    //border-top: 1px solid gray;
     padding-top: 7px;
   }
 }

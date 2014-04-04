@@ -62,19 +62,19 @@
 
     <div class="container-fluid" id="contact-overview">
       <div class="row">
-        <div class="col-xs-12">
-          <p>Sagent has a unique global structure that encompasses the USA, Israel and Taiwan, enabling clients to access both expert local services and our global expertise and network.</p>
-          <p>Clients have the option of transferring control of our services to any of our locations, according to their unique business and expansion needs.</p>
+        <div class="col-xs-8 col-xs-offset-2">
+          <h4>Sagent has a unique global structure that encompasses the USA, Israel and Taiwan, enabling clients to access both expert local services and our global expertise and network.</h4>
+          <h5>Clients have the option of transferring control of our services to any of our locations, according to their unique business and expansion needs.</h5>
         </div>
       </div>
     </div>
 
-    <div class="container-fluie" id="contact-offices">
+    <div class="container-fluid" id="contact-offices">
       <div class="row">
         <div class="col-sm-6 col-md-3">
           <div class="office text-center">
             <h5 class="name">San Francisco Bay Area</h5>
-            <img src="/img/logo.png" class="img-responsive">
+            <img src="/img/ggb.jpg" class="img-responsive">
             <p class="address">
               1521 California Cir., 2nd Floor<br/>
               Milpitas, CA 95035<br/>
@@ -86,7 +86,7 @@
         <div class="col-sm-6 col-md-3">
           <div class="office text-center">
             <h5 class="name">Israel</h5>
-            <img src="/img/logo.png" class="img-responsive">
+            <img src="/img/ggb.jpg" class="img-responsive">
             <p class="address">
               Derech Hahoresh 4<br/>
               Yehud, 5647003
@@ -96,7 +96,7 @@
         <div class="col-sm-6 col-md-3">
           <div class="office text-center">
             <h5 class="name">Taiwan</h5>
-            <img src="/img/logo.png" class="img-responsive">
+            <img src="/img/ggb.jpg" class="img-responsive">
             <p class="address">
               10F-6 No. 171 Songde Road<br/>
               Xinyi District<br/>
@@ -107,7 +107,7 @@
         <div class="col-sm-6 col-md-3">
           <div class="office text-center">
             <h5 class="name">Chicago</h5>
-            <img src="/img/logo.png" class="img-responsive">
+            <img src="/img/ggb.jpg" class="img-responsive">
             <p class="address">
               1340 Shermer Road<br/>
               Suite 250<br/>
@@ -118,7 +118,7 @@
         <div class="col-sm-6 col-md-3">
           <div class="office text-center">
             <h5 class="name">Los Angeles</h5>
-            <img src="/img/logo.png" class="img-responsive">
+            <img src="/img/ggb.jpg" class="img-responsive">
             <p class="address">
               1930 South Brea Canyon Road<br/>
               Suite 260<br/>
@@ -129,7 +129,7 @@
         <div class="col-sm-6 col-md-3">
           <div class="office text-center">
             <h5 class="name">San Diego</h5>
-            <img src="/img/logo.png" class="img-responsive">
+            <img src="/img/ggb.jpg" class="img-responsive">
             <p class="address">
               2110 S. Coast Highway<br/>
               Suite M<br/>
@@ -184,9 +184,6 @@
     <div class="footer-wrap">
       <div class="container">
           <div class="row">
-              <hr/>
-          </div>
-          <div class="row">
               <div class="col-md-12 text-center credit">
                   Copyright Sagent Mangement LLC, 2014 | Designed by <a href="http://supersimplegames.net">Super Simple Games LLC.</a>
                   <br/>
@@ -195,31 +192,6 @@
       </div>
     </div>
   </div>
-
-
-<script type="text/javascript">
-$(document).ready(function() {
-
-  //STICKY FOOTER
-  var makeFooterSticky = function() {
-      $('#push').css('height','');
-      var vwptHeight = $(window).height();
-      var bodyHeight = $('.body-wrapper').outerHeight();
-      var footerHeight = $('.footer').outerHeight();
-      var newPushHeight = vwptHeight - bodyHeight - footerHeight;
-      if (newPushHeight > 0) {
-          $('#push').css('height',newPushHeight);    
-      };
-      console.log('vwpt / body / footer = new push height: '+vwptHeight+"/"+bodyHeight+"/"+footerHeight+"="+newPushHeight);
-  };
-  makeFooterSticky();
-  $( window ).bind('orientationchange resize', function() {
-    makeFooterSticky();
-  });
-
-});//document.ready
-
-</script>
 
 </body>
 </html>
