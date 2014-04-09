@@ -30,6 +30,13 @@ $(document).ready(function() {
 	});
 	equalHeightColumns();
 
+	//Inner tile
 	var innerTileWidth = $('.inner-tile').width();
 	$('.inner-tile').height( innerTileWidth );
+
+	//Services list styling
+	$('#services-financial p, #services-tax p, #services-consulting p').each(function(){
+		var serviceItem = $(this).text().split('–');
+		$(this).html('<div class="service-item-wrapper"><div>' + serviceItem[0] + '</div><div>' + serviceItem[1] +'</div></div>');
+	});
 });
