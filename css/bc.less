@@ -1,5 +1,6 @@
 //Ostrich, oswald, porter-sans-inline-block, quicksand-regular, blackout-midnight
 @color-blue: #003879;
+@color-white: white;
 @color-light-blue: #88B3D1;
 @color-polo-blue: #B2C2D6;
 @color-light-polo-blue: #D6E3EB;
@@ -220,7 +221,7 @@ body {
 
 /************** Homepage ***************/
 .billboard {
-  background: url("../img/t-25px.jpg") no-repeat center center; 
+  background: url("../img/plant.jpg") no-repeat bottom center; 
   background-size: cover;
   min-height: 300px;
   position: relative;
@@ -228,9 +229,10 @@ body {
   padding-bottom: 50px;
   .headline { 
     font-family: 'Bitter', serif; 
-    color: white;
+    color: @color-white;
+    text-shadow: 2px 2px 2px dimgray;
     letter-spacing: 3px;
-    .off-color { color: @color-light-blue; }
+    .off-color { color: @color-blue; }
     line-height: 36px;
   }
   .tagline { 
@@ -296,7 +298,7 @@ body {
   .item-content {
     padding: 0px 15%;
     color: white;
-    min-height: 350px;
+    min-height: 250px;
     display: table;
     >* {
       display: table-cell;
@@ -328,13 +330,46 @@ body {
   }
 }
 #services-financial, #services-tax, #services-consulting {
-  padding-top: 112px;
-}
-
-.services1 { 
+  padding-top: 70px;
   padding-bottom: 30px;
-  //.transparent-blue-bg;
+  p {
+    //background-color: @color-polo-blue;
+    color: @color-blue;
+    //padding: 10px;
+  }
+  .service-item-wrapper {
+    border: 1px solid @color-light-polo-blue;
+    border-radius: 5px;
+    @media (min-width: 768px) {
+      display: table;
+    }
+    div {
+      padding: 5px 10px;
+      @media (min-width: 768px) {
+        display: table-cell;
+        vertical-align: middle;
+      }
+      &:nth-child(1) { 
+        background-color: @color-light-polo-blue; 
+//        border-top-left-radius: 5px; 
+//        border-bottom-left-radius: 5px; 
+        //text-align: center; 
+        white-space: nowrap;
+      }
+      &:nth-child(2) { color: dimgray; }
+    }
+  }
 }
+#services-tax {
+  background-color: @color-polo-blue;
+  .super-title {
+    color: @color-white;
+  }
+  .service-item-wrapper div {
+    background-color: @color-white;
+  }
+}
+/*
 .thumbnail {
   //.transparent-blue-bg;
   padding: 5px 15px;
@@ -370,9 +405,15 @@ body {
     z-index: 5;
   }
 }
+*/
 /* Who we are *******************************************************/
+#vision {
+  padding-bottom: 60px;
+  color: dimgray;
+}
 #team {
-  .transparent-blue-bg;
+  background-color: @color-polo-blue;
+  .super-title { color: @color-white; }
   .s-icon {
     max-width: 32px;
     position: absolute;
@@ -387,7 +428,8 @@ body {
 
 /* Clients *******************************************************/
 #client-logos, #client-testimonials {
-  .transparent-blue-bg;
+  background-color: @color-polo-blue;
+  .super-title { color: @color-white; }
 }
 #client-logos {
   padding-top: 30px;
@@ -401,11 +443,16 @@ body {
     padding-bottom: 100%;
     margin-left: 0%;
   }
+  img {
+    margin-left: auto;
+    margin-right: auto;
+  }
 }
 
 /* Contact *******************************************************/
 #contact-overview, #contact-us {
-  .transparent-blue-bg;
+  background-color: @color-polo-blue;
+  .super-title { color: @color-white; }
 }
 #contact-overview {
   padding-top: 60px;
@@ -431,7 +478,7 @@ body {
   }
 }
 #contact-us {
-  background: url("/img/t-25px.jpg") no-repeat center center;
+  background: url("/img/plant.jpg") no-repeat center center;
   background-size: cover; 
   color: white;
   width: 100%;
@@ -467,7 +514,7 @@ body {
 
 /* Footer *******************************************************/
 .footer { 
-  background-color: darkgray; 
+  background-color: black; 
   padding: 12px 30px;
   .footer-wrap {
     //border-top: 1px solid gray;
