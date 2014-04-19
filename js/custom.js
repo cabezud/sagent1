@@ -20,9 +20,9 @@ $(document).ready(function() {
 		var leftCol = $('.left').height();
 		var rightCol = $('.right').height();
 		if ( leftCol > rightCol ) {
-			$('.right').height(leftCol);
+			$('.right, .left').height(leftCol);
 		} else {
-			$('.left').height(rightCol);
+			$('.right, .left').height(rightCol);
 		}
 	};
 	$( window ).bind('orientationchange resize', function() {
@@ -35,10 +35,12 @@ $(document).ready(function() {
 	$('.inner-tile').height( innerTileWidth );
 
 	//Services list styling
-	$('#services-financial p, #services-tax p, #services-consulting p').each(function(){
+	$('#services-financial, #services-tax, #services-consulting').find('li').each(function(){
 		var serviceItem = $(this).text().split('–');
-		$(this).html('<div class="service-item-wrapper"><div>' + serviceItem[0] + '</div><div>' + serviceItem[1] +'</div></div>');
+		$(this).html('<div class="square-bullet"></div><h4>' + serviceItem[0] + '</h4>' + serviceItem[1] );
 	});
+	//$('#services-financial, #services-tax, #services-consulting').find('li').prepend('<i class="fa fa-stop"></i>');
+	//$('#services-financial, #services-tax, #services-consulting').find('li').prepend('<div class="square-bullet"></div>');
 });
 
 /*
