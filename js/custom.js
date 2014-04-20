@@ -1,5 +1,7 @@
 $(document).ready(function() {
-	  //STICKY FOOTER
+
+/*
+  //STICKY FOOTER
   var makeFooterSticky = function() {
       $('#push').css('height','');
       var vwptHeight = $(window).height();
@@ -15,6 +17,8 @@ $(document).ready(function() {
   $( window ).bind('orientationchange resize', function() {
     makeFooterSticky();
   });
+
+*/
 	
 	var equalHeightColumns = function() {
 		var leftCol = $('.left').height();
@@ -32,13 +36,17 @@ $(document).ready(function() {
 
 	//Inner tile
 	var innerTileWidth = $('.inner-tile').width();
-	$('.inner-tile').height( innerTileWidth );
+//	$('.inner-tile').height( innerTileWidth );
 
-	//Services list styling
+	//Square bullet list styling
 	$('#services-financial, #services-tax, #services-consulting').find('li').each(function(){
 		var serviceItem = $(this).text().split('–');
 		$(this).html('<div class="square-bullet"></div><h4>' + serviceItem[0] + '</h4>' + serviceItem[1] );
 	});
+	$('#vision li').each(function(){
+		var visionItem = $(this).text();
+		$(this).html('<div class="square-bullet"></div><h4>' + visionItem + '</h4>');
+	})
 	//$('#services-financial, #services-tax, #services-consulting').find('li').prepend('<i class="fa fa-stop"></i>');
 	//$('#services-financial, #services-tax, #services-consulting').find('li').prepend('<div class="square-bullet"></div>');
 });

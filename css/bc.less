@@ -4,9 +4,13 @@
 @color-dark-blue: #004274;
 @color-bright-blue: #3793d9;
 @color-dim-blue: #225886;
+@color-soft-blue: #C3DEEE;//#D9E9F5; //#99D3FF;
+
 @color-red: #B31213;
 @color-white: white;
+@color-transparent-white: rgba(255, 255, 255, 0.5);
 @color-black: black;
+@color-transparent-black: rgba(0, 0, 0, 0.3);
 @color-gray: gray;
 @color-light-gray: #F1F1F1;
 @color-dark-gray: darkgray;
@@ -106,6 +110,7 @@
 .transparent-blue-bg {
   background: rgba(0, 56, 121, .3);
 }
+.emphasize { color: @color-red; }
 .super-title {
   margin-top: 50px;
   margin-bottom: 25px;
@@ -177,6 +182,28 @@ blockquote:after {
   content: close-quote;
   visibility: hidden;
 }
+.overview {
+  background-color: @color-dim-blue;
+  color: @color-light-gray;
+  padding: 30px 15px 40px;
+  font-size: 17px;
+  .headline {
+    font-family: 'Bitter', serif; 
+    color: @color-white;
+    letter-spacing: 3px;
+    line-height: 36px;
+  }
+  .tagline { 
+    border-top: 2px solid @color-red;
+    padding: 15px 0px;
+    width: 90%;
+    margin-left: 5%;
+    color: white;
+    font-size: 18px;
+    line-height: 26px;
+  }
+}
+
 /************** Overrides ***************/
 html, body {
   height: 100%;
@@ -196,31 +223,47 @@ ul {
 .btn-primary { .button-nice; }
 .dropdown-menu {
   padding: 15px;
+  li a:hover { color: @color-white; background-color: @color-dim-blue; }
 }
 
 /************** Navbar ***************/
 body {
   padding-top: 70px;
 }
+
 #top-navbar {
+
   background-color: white;
   height: 70px;
   -webkit-box-shadow: 0 8px 6px -6px @color-dark-gray;
   box-shadow: 0 8px 6px -6px black;
   font-size: 15px;
-  .navbar-brand, .navbar-right, .navbar-right>li>a { 
-    height: 70px; 
+
+  //.main-links, { height: 70px; }
+  //.navbar-brand, .main-links>li>a { height: 70px; }
+  .navbar-brand { height: 70px; }
+
+  .navbar-brand img {
+    height: 100%;
   }
+  .navbar-toggle {
+    background-color: @color-blue;
+    .icon-bar { background-color: @color-white; }
+  }
+  .navbar-collapse {
+    background-color: @color-white;
+    //li, a { color: @color-white; }
+  }
+}
+@media (min-width: 769px) {
   .navbar-nav>li>a {
     padding-top: 25px;
+    padding-bottom: 25px;
     &.active, &:hover {
-      background-color: @color-light-blue;
+      background-color: @color-dim-blue;
       color: @color-white;
     }
   }
-  .navbar-brand img {
-    height: 100%;
-  }  
 }
 
 /************** Homepage ***************/
@@ -236,17 +279,6 @@ body {
     color: @color-white;
     letter-spacing: 3px;
     line-height: 36px;
-    /*
-    &:after {
-      content:"";
-      margin-left: 10%;
-      margin-top: 15px;
-      margin-bottom: 15px;
-      width: 80%;
-      border-bottom: 2px solid red;
-      display: block;
-    }
-    */
   }
   .tagline { 
     border-top: 2px solid @color-red;
@@ -304,20 +336,30 @@ body {
 }
 
 /* Services *******************************************************/
-#services-overview {
-  background-color: @color-dim-blue;
-  color: @color-light-gray;
-  padding: 60px 0px 60px;
-  font-size: 20px;
-  //font-family: 'OpenSans-Regular';
-}
+
+#services-overview { .overview; }
 @media (max-width: 768px) {
-  .item-content>* {
-    font-size: 18px;
-  }
+  .item-content>* { font-size: 18px; }
+  #services-nav-wrapper { display: none; }
+}
+@media (min-width: 769px) {
+  #services-overview {
+    .left {
+      padding-left: 7%;
+      border-right: 1px solid @color-transparent-white;
+      text-align: justify;
+      p { margin-bottom: 0px; }
+    }
+    .right {
+      padding-right: 7%;
+      text-align: justify;
+      p { margin-bottom: 0px; }
+    }
+  }  
 }
 #services-nav {
   top: 70px;
+  width: 100%;
   -webkit-box-shadow: 0 8px 6px -6px black;
   box-shadow: 0 8px 6px -6px black;
   z-index: 9999;
@@ -331,8 +373,8 @@ body {
   }
   li>a { padding: 13px; }
   li:hover>a, li.active>a {
-    background-color: @color-light-blue;
-    color: white;
+    background-color: @color-dim-blue;
+    color: @color-white;
   }
   li:nth-child(2) {
     border-left: 1px solid @color-dark-gray;
@@ -340,7 +382,8 @@ body {
   }
 }
 #services-financial, #services-tax, #services-consulting {
-  padding-top: 70px;
+  margin-top: 0px;
+  padding-top: 0px;
   padding-bottom: 30px;
   h2 { color: @color-dim-blue; }
   ul {
@@ -362,8 +405,8 @@ body {
   }
 }
 #services-tax {
-  background-color: @color-light-blue;
-  h2 { color: @color-white; }
+  background-color: @color-soft-blue;
+  h2 { color: @color-dark-blue; }
   ul {
     .square-bullet {
       background-color: @color-white;
@@ -376,12 +419,33 @@ body {
 
 /* Who we are *******************************************************/
 #about {
+  //div { border: 1px dotted yellow; }
   background-color: @color-dim-blue;
+  .super-title {
+    color: @color-white;
+    margin-bottom: 0px;
+    &:after {
+      content: "";
+      border-bottom: 2px solid @color-red;
+      width: 70%;
+      margin-left: 15%;
+      display: block;
+      margin-top: 20px;
+    }
+  }
+}
+.carousel {
+  margin-top: -15px;
+}
+.carousel-indicators {
+  bottom: 5px;
 }
 .item-content {
+  font-size: 18px;
   padding: 0px 15%;
   color: white;
   min-height: 250px;
+  margin-top: -15px;
   display: table;
   >* {
     display: table-cell;
@@ -396,32 +460,55 @@ body {
 }
 #vision {
   padding-bottom: 60px;
-  color: @color-dark-gray;
+  //color: @color-dark-gray;
+  li {
+    margin-bottom: 45px;
+    padding-left: 50px;
+    position: relative;
+  }
+  .square-bullet {
+    .bullet-square;
+    position: absolute;
+    left: 0px;
+    top: -10px;
+  }
 }
 #team {
-  background-color: @color-light-blue;
-  //color: @color-white;
+  padding-bottom: 45px;
+  background-color: @color-soft-blue;
   .super-title { color: @color-white; }
+  h4 { margin-bottom: 0px; }
+  h5 { margin-top: 0px; }
   .s-icon {
     max-width: 32px;
-    position: absolute;
-    top: -5px;
+//    position: absolute;
+//    top: 10px;
     margin-left: 10px;
+    &:hover { border: 2px solid @color-white; }
   }
-  .inner-tile.test img {
+  .inner-tile.oded img {
     max-width: 85%;
-    top: 63%;
   }
 }
 
 /* Clients *******************************************************/
-#client-logos, #client-testimonials {
-  background-color: @color-light-blue;
-  .super-title { color: @color-white; }
-}
 #client-logos {
-  padding-top: 30px;
+  background-color: @color-dim-blue;
   padding-bottom: 30px;
+  color: @color-white;
+  .super-title:after {
+    content: "";
+    border-bottom: 2px solid @color-red;
+    width: 70%;
+    margin-left: 15%;
+    display: block;
+    margin-top: 20px;
+  }
+}
+#client-testimonials {
+  background-color: @color-soft-blue;
+  padding-bottom: 45px;  
+  .super-title { color: @color-white; }
 }
 #client-stories {
   padding-bottom: 30px;
@@ -438,21 +525,19 @@ body {
 }
 
 /* Contact *******************************************************/
-#contact-overview, #contact-us {
-  background-color: @color-light-blue;
-  .super-title { color: @color-white; }
-}
-#contact-overview {
-  padding-top: 60px;
-  padding-bottom: 60px;
-  color: white;
-  h3, h4, h4 { line-height: 1.4em; }
+#contact-overview { 
+  .overview;
+  .headline, .tagline {
+    padding-left: 15px;
+    padding-right: 15px;
+  }
 }
 #contact-offices {
   padding-top: 45px;
   padding-bottom: 45px;
+  //color: @color-white;
   .office {
-    background-color: @color-light-blue;
+    background-color: @color-soft-blue;
     margin-top: 15px;
     margin-bottom: 15px;
     padding-top: 10px;
@@ -466,14 +551,15 @@ body {
     margin-left: auto;
     margin-right: auto;
   }
+  .address { margin: 10px 0px; }
 }
 #contact-us {
-  background: url("/img/tree.jpg") no-repeat center center;
+  background: url("/img/tree.jpg") no-repeat bottom center;
   background-size: cover; 
   color: white;
   width: 100%;
   .contact-us-wrap {
-    .transparent-black-bg;
+    background-color: @color-transparent-black;
     padding-top: 15px;
     padding-bottom: 15px;
   }

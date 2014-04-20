@@ -68,10 +68,16 @@
 
     <div class="container-fluid" id="services-overview">
       <div class="row">
-        <div class="col-sm-10 col-sm-offset-1">
-          <p>Sagent’s expert team will take care of all your financial and operational functions, so you can concentrate on growing your business.</p>
-          <p>We will deliver a customized, scalable and comprehensive suite of backbone services; starting from bookkeeping through to high-level CFO services.</p>
+        <div class="col-sm-10 col-sm-offset-1 text-center">
+          <h3 class="headline">Sagent’s expert team will take care of all your financial and operational functions, so you can concentrate on growing your business.</h3>
+          <p class="tagline">We will deliver a customized, scalable and comprehensive suite of backbone services; starting from bookkeeping through to high-level CFO services.</p>
+        </div>
+      </div>
+      <div class="row text-center">
+        <div class="col-sm-5 col-sm-offset-1 left">
           <p>The benefit of working with Sagent extends far beyond being cost-effective.  With our financial management expertise, broad ecosystem knowledge and extensive network, your company will not only achieve its goals – you will exceed them.</p>
+        </div>
+        <div class="col-sm-5 right">
           <p>We will manage your entire accounting system, or alternatively, support and advise your in-house financial department in accordance with your company’s needs.</p>
         </div>
       </div>
@@ -100,10 +106,19 @@
         }
       });
       //add scrollspy to services nav
-      $('body').scrollspy({ target: '#services-nav' });
+      $('body').scrollspy({ 
+        target: '#services-nav',
+        offset: 200
+      });
 
       //add smooth scrolling
       $("#services-nav ul li a[href^='#']").on('click', function(e) {
+        e.preventDefault();
+        var target_offset = $(this.hash).offset() ? $(this.hash).offset().top : 0;
+        //change this number to create the additional off set        
+        var customoffset = 100;
+        $('html, body').animate({scrollTop:target_offset - customoffset}, 300);
+        /*
         // prevent default anchor click behavior
         e.preventDefault();
         // animate
@@ -114,6 +129,7 @@
            // (default click behaviour)
            window.location.hash = this.hash;
         });
+        */
       });
 
 
@@ -167,10 +183,10 @@
             <li>Financial records – upkeep of records of every financial transaction of the business. </li>
             <li>Accounts Receivable – invoicing customers, receiving &amp; trucking payments. </li>
             <li>Accounts Payable – implementation of the company’s purchasing procedure &amp; preparation of payment report.</li>
-            <li>Fixed Assets – management &amp; control of the company’s fixed assets and cumulative depreciation calculations &amp; records.  </li>
-            <li>Bank Accounts &amp; Credit cards – reconciliation of bank accounts and balancing of the company's books. </li>
-            <li>Salary Slips – preparation of monthly salary slips.   </li>
-            <li>Social Benefits, Income Tax &amp; Social Security – preparation &amp; submission of monthly reports and processing of relevant payments. </li>
+            <li>Fixed Assets – management &amp; control of the company’s fixed assets and cumulative depreciation calculations &amp; records.</li>
+            <li>Bank Accounts &amp; Credit cards – reconciliation of bank accounts and balancing of the company's books.</li>
+            <li>Salary Slips – preparation of monthly salary slips.</li>
+            <li>Social Benefits, Income Tax &amp; Social Security – preparation &amp; submission of monthly reports and processing of relevant payments.</li>
           </ul>
         </div>
       </div>
