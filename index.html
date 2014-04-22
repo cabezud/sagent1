@@ -4,6 +4,35 @@
   <META NAME="ROBOTS" CONTENT="NOINDEX, NOFOLLOW">
   <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
   <title>Sagent Management | Home</title>
+  <!-- if before ie9, use shim for html5 eleements, and a custom fn to approximate the new .bind method in this case used in less compiling -->
+  <!--[if lt IE 9]>
+  <script src="http://html5shim.googlecode.com/svn/trunk/html5.js" type="text/javascript"></script>
+  <script type="text/javascript">
+    if (!Function.prototype.bind) {
+      Function.prototype.bind = function (oThis) {
+        if (typeof this !== "function") {
+          // closest thing possible to the ECMAScript 5 internal IsCallable function
+          throw new TypeError("Function.prototype.bind - what is trying to be bound is not callable");
+        }
+
+        var aArgs = Array.prototype.slice.call(arguments, 1), 
+            fToBind = this, 
+            fNOP = function () {},
+            fBound = function () {
+              return fToBind.apply(this instanceof fNOP && oThis
+                                     ? this
+                                     : oThis,
+                                   aArgs.concat(Array.prototype.slice.call(arguments)));
+            };
+
+        fNOP.prototype = this.prototype;
+        fBound.prototype = new fNOP();
+
+        return fBound;
+      };
+    }
+  </script>
+  <![endif]-->
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="shortcut icon" type="img/ico" href="img/sangenticon.ico">
 <!--
@@ -14,9 +43,9 @@
   <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css" />
   <link rel="stylesheet/less" type="text/css" href="css/bc.less"/>
 
-  <script src="js/less-1.7.0.min.js"></script>
   <script src="js/jquery-1.10.2.min.js"></script>
   <script src="js/jquery-ui.min.js"></script>
+  <script src="js/less-1.7.0.min.js"></script>
   <script type="text/javascript" src="js/bootstrap.min.js"></script>
   <script src="js/custom.js"></script>
 </head>
@@ -67,7 +96,7 @@
     <div class="container-fluid" id="billboard">
       <div class="row">
         <div class="col-sm-10 col-sm-offset-1">
-          <h3 class="headline text-center">A GLOBAL <span class="off-color">CUSTOMIZED</span>, END-TO-END SUITE OF FINANCIAL, TAX &AMP; OPERATIONAL SERVICES</h3>
+          <h3 class="headline text-center">A GLOBAL, CUSTOMIZED SUITE OF FINANCIAL, TAX &AMP; OPERATIONAL SERVICES</h3>
           <p class="tagline text-center">Our uniqueness lies in our integration of local knowledge, global connections and financial management expertise.</p>
           <p class="text-center"><a href="contact.html" class="btn" role="button">CONTACT US</a>
         </div>
@@ -81,7 +110,7 @@
           <div class="difference-point"></div>
         </div>
         <div class="col-sm-9">
-          <h4>Global Knowledge. Local Service.</h4>
+          <h4>Global Knowledge, Local Service.</h4>
           <p>Our unique global structure, encompassing the USA (East and West coast), Israel and Taiwan, enables us to provide expert local services should you choose to expand your business within or to the USA, Israel or the Asia Pacific region.</p>
         </div>
       </div>
@@ -90,7 +119,7 @@
           <div class="difference-point text-center"></div>
         </div>
         <div class="col-sm-9">
-          <h4>Broad ecosystem knowledge. Extensive network.</h4>
+          <h4>Broad ecosystem knowledge, Extensive network.</h4>
           <p>Working with Sagent, you have the best of both worlds, with access to our extensive connection base and global experience. Your company will benefit from our extensive management experience, ecosystem knowledge and worldwide network.</p>
         </div>
       </div>
@@ -99,7 +128,7 @@
           <div class="difference-point"></div>
         </div>
         <div class="col-sm-9">
-          <h4>Outsourced services. In-house approach.</h4>
+          <h4>Outsourced services, In-house approach.</h4>
           <p>Having been clients ourselves, we commit to being an extension of your team, supporting your growth and success and delivering ROI. We will advance your business anywhere from early stage through to that of a well-established organization.</p>
         </div>
       </div>

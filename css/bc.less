@@ -21,7 +21,27 @@
 .test-5 { font-size: 20px; background-color: @color-dark-blue; }
 .test-6 { font-size: 20px; background-color: @color-red; }
 
-@import url(http://fonts.googleapis.com/css?family=Bitter);
+//@import url(http://fonts.googleapis.com/css?family=Bitter);
+@font-face {
+    font-family: 'bitterbold';
+    src: url('../fonts/bitter-bold-webfont.eot');
+    src: url('../fonts/bitter-bold-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/bitter-bold-webfont.woff') format('woff'),
+         url('../fonts/bitter-bold-webfont.ttf') format('truetype'),
+         url('../fonts/bitter-bold-webfont.svg#bitterbold') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'bitterregular';
+    src: url('../fonts/bitter-regular-webfont.eot');
+    src: url('../fonts/bitter-regular-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/bitter-regular-webfont.woff') format('woff'),
+         url('../fonts/bitter-regular-webfont.ttf') format('truetype'),
+         url('../fonts/bitter-regular-webfont.svg#bitterregular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
 @font-face {
     font-family: 'quicksand-regular';
     src: url('../fonts/quicksand-regular-webfont.eot');
@@ -95,7 +115,7 @@
   h1:nth-of-type(8), p:nth-of-type(8) { font-family: 'Nunito', sans-serif, 300; }
   h1:nth-of-type(9), p:nth-of-type(9) { font-family: 'Krona One'; }
   h1:nth-of-type(10), p:nth-of-type(10) { font-family: 'Archivo Black'; }
-  h1:nth-of-type(11), p:nth-of-type(11) { font-family: 'Bitter'; }
+  h1:nth-of-type(11), p:nth-of-type(11) { font-family: 'bitterregular'; }
 }
 
 /************** Mixins ***************/
@@ -112,10 +132,10 @@
 }
 .emphasize { color: @color-red; }
 .super-title {
-  margin-top: 50px;
+  margin-top: 65px;
   margin-bottom: 25px;
   letter-spacing: 6px;
-  font-family: 'Bitter', serif;
+  font-family: 'bitterregular', serif;
 }
 .tile {
   box-shadow: 2px 2px 2px dimgray;
@@ -188,7 +208,7 @@ blockquote:after {
   padding: 30px 15px 40px;
   font-size: 17px;
   .headline {
-    font-family: 'Bitter', serif; 
+    font-family: 'bitterregular', serif; 
     color: @color-white;
     letter-spacing: 3px;
     line-height: 36px;
@@ -214,7 +234,7 @@ body {
 }
 a { color: @color-blue; }
 h1, h2, h3, h4, h5, h6 {
-  font-family: 'Bitter', sans-serif;  
+  font-family: 'bitterregular', sans-serif;  
 }
 ul {
   list-style: none;
@@ -275,12 +295,13 @@ body {
   padding-top: 30px;
   padding-bottom: 15px;
   .headline {
-    font-family: 'Bitter', serif; 
+    font-family: 'bitterbold', serif; 
     color: @color-white;
-    letter-spacing: 3px;
+    letter-spacing: 5px;
     line-height: 36px;
   }
   .tagline { 
+    font-family: 'OpenSans-Regular', sans-serif;
     border-top: 2px solid @color-red;
     padding-top: 10px;
     width: 70%;
@@ -365,6 +386,7 @@ body {
   z-index: 9999;
   * { border-radius: 0px; }
   font-size: 16px;
+  font-family: 'OpenSans-Bold', sans-serif;
   .navbar {
     background-color: @color-white;
     color: @color-dark-gray;
@@ -462,7 +484,8 @@ body {
   padding-bottom: 60px;
   //color: @color-dark-gray;
   li {
-    margin-bottom: 45px;
+    margin-top: 45px;
+    margin-bottom: 0px;
     padding-left: 50px;
     position: relative;
   }
