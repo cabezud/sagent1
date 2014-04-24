@@ -14,14 +14,7 @@
 @color-gray: gray;
 @color-light-gray: #F1F1F1;
 @color-dark-gray: darkgray;
-.test-1 { font-size: 20px; background-color: @color-blue; }
-.test-2 { font-size: 20px; background-color: @color-light-blue; }
-.test-3 { font-size: 20px; background-color: @color-light-blue; }
-.test-4 { font-size: 20px; background-color: @color-bright-blue; }
-.test-5 { font-size: 20px; background-color: @color-dark-blue; }
-.test-6 { font-size: 20px; background-color: @color-red; }
 
-//@import url(http://fonts.googleapis.com/css?family=Bitter);
 @font-face {
     font-family: 'bitterbold';
     src: url('../fonts/bitter-bold-webfont.eot');
@@ -177,6 +170,109 @@ blockquote:after {
   }
 }
 
+/********Spinner Throbber************************************************/
+@-webkit-keyframes throbber {
+  0% {
+    background: #dde2e7;
+  }
+
+  10% {
+    background: #6b9dc8;
+  }
+
+  40% {
+    background: #dde2e7;
+  }
+}
+
+@-moz-keyframes throbber {
+  0% {
+    background: #dde2e7;
+  }
+
+  10% {
+    background: #6b9dc8;
+  }
+
+  40% {
+    background: #dde2e7;
+  }
+}
+
+@-o-keyframes throbber {
+  0% {
+    background: #dde2e7;
+  }
+
+  10% {
+    background: #6b9dc8;
+  }
+
+  40% {
+    background: #dde2e7;
+  }
+}
+
+@keyframes throbber {
+  0% {
+    background: #dde2e7;
+  }
+
+  10% {
+    background: #6b9dc8;
+  }
+
+  40% {
+    background: #dde2e7;
+  }
+}
+
+/* :not(:required) hides these rules from IE9 and below */
+.throbber {
+  top: 12em;
+  left: 45%;
+  display: none !important;
+}
+.throbber:not(:required) {
+  -webkit-animation: throbber 1500ms 300ms infinite ease-out;
+  -moz-animation: throbber 1500ms 300ms infinite ease-out;
+  -ms-animation: throbber 1500ms 300ms infinite ease-out;
+  -o-animation: throbber 1500ms 300ms infinite ease-out;
+  animation: throbber 1500ms 300ms infinite ease-out;
+  background: #dde2e7;
+  display: inline-block;
+  position: relative;
+  text-indent: -9999px;
+  width: 0.9em;
+  height: 1.5em;
+  margin: 0 1.6em;
+}
+.throbber:not(:required):before, .throbber:not(:required):after {
+  background: #dde2e7;
+  content: '\x200B';
+  display: inline-block;
+  width: 0.9em;
+  height: 1.5em;
+  position: absolute;
+  top: 0;
+}
+.throbber:not(:required):before {
+  -webkit-animation: throbber 1500ms 150ms infinite ease-out;
+  -moz-animation: throbber 1500ms 150ms infinite ease-out;
+  -ms-animation: throbber 1500ms 150ms infinite ease-out;
+  -o-animation: throbber 1500ms 150ms infinite ease-out;
+  animation: throbber 1500ms 150ms infinite ease-out;
+  left: -1.6em;
+}
+.throbber:not(:required):after {
+  -webkit-animation: throbber 1500ms 450ms infinite ease-out;
+  -moz-animation: throbber 1500ms 450ms infinite ease-out;
+  -ms-animation: throbber 1500ms 450ms infinite ease-out;
+  -o-animation: throbber 1500ms 450ms infinite ease-out;
+  animation: throbber 1500ms 450ms infinite ease-out;
+  right: -1.6em;
+}
+
 /************** Overrides ***************/
 html, body {
   height: 100%;
@@ -236,6 +332,11 @@ body {
       background-color: @color-dim-blue;
       color: @color-white;
     }
+  }
+}
+@media (min-width: 769px) and (max-width: 991px) {
+  #top-navbar .navbar-header {
+    margin-right: -20%;
   }
 }
 
@@ -420,6 +521,7 @@ body {
   padding: 0px 15%;
   color: white;
   min-height: 250px;
+  height: 250px;
   margin-top: -15px;
   display: table;
   >* {
@@ -430,8 +532,10 @@ body {
 }
 @media (max-width: 768px) {
   .item-content {
+    min-height: 450px;
+    height: 450px;
+    padding: 0px 5%;
     >* { font-size: 18px; }
-    min-height: 350px;
   }
 }
 #vision {
@@ -531,21 +635,17 @@ body {
   .address { margin: 10px 0px; }
 }
 #contact-us {
-<<<<<<< HEAD
   background: url("../img/tree.jpg") no-repeat bottom center;
-=======
-  background: url("../img/plant.jpg") no-repeat center center;
->>>>>>> 983cf3636efed1eeb5638dca4f4704a687adb320
   background-size: cover; 
   color: white;
   width: 100%;
   .contact-us-wrap {
     background-color: @color-transparent-black;
     padding-top: 15px;
-    padding-bottom: 15px;
+    padding-bottom: 60px;
   }
   a { color: white; }
-  button {
+  .submit {
     .button-nice;
     background-color: @color-white;
     color: @color-black;
@@ -558,6 +658,15 @@ body {
   }
   b { font-family: 'OpenSans-Bold', sans-serif; }  
 }
+#contact-us #form-messages {
+  display: none;
+  margin-top: 5px;
+  width: 95%;
+  position: absolute;
+  border-radius: 2px;
+  &.alert-success { top: 0%; background-color: @color-white; color: @color-blue; }
+}
+
 #contact-us .form-control {
   background: none;
   border: 2px solid white;

@@ -11,10 +11,10 @@
 
 
         // Check that data was sent to the mailer.
-        if ( empty($name) OR empty($phone) OR empty($message) OR !filter_var($email, FILTER_VALIDATE_EMAIL)) {
+        if ( empty($name) OR empty($message) OR !filter_var($email, FILTER_VALIDATE_EMAIL)) {
             // Set a 400 (bad request) response code and exit.
             http_response_code(400);
-            echo "Oops! There was a problem with your submission. Please complete the form and try again.";
+            echo "Oops! There was a problem with this submission. Please complete the form and try again.";
             exit;
         }
 
@@ -23,12 +23,12 @@
         $recipient = "cabez.ud@gmail.com";
 
         // Set the email subject.
-        $subject = "New contact from $name";
+        $subject = "Sagent website contact from $name";
 
         // Build the email content.
         $email_content = "Name: $name\n";
+        $email_content .= "Phone: $phone\n";
         $email_content .= "Email: $email\n\n";
-        $email_content .= "Phone: $phone\n\n";
         $email_content .= "Message:\n$message\n";
 
         // Build the email headers.
