@@ -1,0 +1,1 @@
+<? $headers = 'From: cabez.ud@gmail.com'; mail('nobody@example.com', 'Test email using PHP', 'Just a test man', $headers, '-fcabez.ud@gmail.com'); ?>
