@@ -1,20 +1,51 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <META NAME="ROBOTS" CONTENT="NOINDEX, NOFOLLOW">
   <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-  <title>Sagent Management | Contact Us</title>
+  <META NAME="ROBOTS" CONTENT="INDEX, FOLLOW">
+  <title>Sagent Management | Home</title>
+  <!-- if before ie9, use shim for html5 eleements, and a custom fn to approximate the new .bind method in this case used in less compiling -->
+  <!--[if lt IE 9]>
+  <script src="http://html5shim.googlecode.com/svn/trunk/html5.js" type="text/javascript"></script>
+  <script type="text/javascript">
+    if (!Function.prototype.bind) {
+      Function.prototype.bind = function (oThis) {
+        if (typeof this !== "function") {
+          // closest thing possible to the ECMAScript 5 internal IsCallable function
+          throw new TypeError("Function.prototype.bind - what is trying to be bound is not callable");
+        }
+
+        var aArgs = Array.prototype.slice.call(arguments, 1), 
+            fToBind = this, 
+            fNOP = function () {},
+            fBound = function () {
+              return fToBind.apply(this instanceof fNOP && oThis
+                                     ? this
+                                     : oThis,
+                                   aArgs.concat(Array.prototype.slice.call(arguments)));
+            };
+
+        fNOP.prototype = this.prototype;
+        fBound.prototype = new fNOP();
+
+        return fBound;
+      };
+    }
+  </script>
+  <![endif]-->
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="shortcut icon" type="img/ico" href="img/sangenticon.ico">
-  <link href='http://fonts.googleapis.com/css?family=Nunito:300' rel='stylesheet' type='text/css'>
-  <link href='http://fonts.googleapis.com/css?family=Krona+One' rel='stylesheet' type='text/css'>
-  <link href='http://fonts.googleapis.com/css?family=Archivo+Black' rel='stylesheet' type='text/css'>
   <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css" />
-  <link rel="stylesheet/less" type="text/css" href="css/bc.less"/>
-  <script src="js/less-1.7.0.min.js"></script>
-  <script src="http://code.jquery.com/jquery.js"></script>
+  <!--<link rel="stylesheet/less" type="text/css" href="css/bc.less"/>-->
+  <link rel="stylesheet" type="text/css" href="css/bc.min.css"/>
+
+  <script src="js/jquery-1.10.2.min.js"></script>
   <script src="js/jquery-ui.min.js"></script>
+  <script src="js/less-1.7.0.min.js"></script>
+  <script src="js/respond.min.js"></script>
   <script type="text/javascript" src="js/bootstrap.min.js"></script>
+  <script src="js/custom.js"></script>
+  <!--[if !IE 7]>  <![endif]-->
 </head>
 <body>
   <div class="body-wrapper">
@@ -93,6 +124,7 @@
             </p>
           </div>
         </div><!--/.col -->
+        <div class="clearfix visible-xs"></div>
         <div class="col-sm-4 col-md-3 col-xs-6">
           <div class="office text-center">
             <h5 class="name">Taiwan</h5>
@@ -115,7 +147,8 @@
             </p>
           </div>
         </div><!--/.col -->
-        <div class="col-sm-4 col-md-3 col-xs-6">
+        <div class="clearfix visible-xs"></div>
+        <div class="col-sm-4 col-md-3 col-md-offset-3 col-xs-6">
           <div class="office text-center">
             <h5 class="name">Los Angeles</h5>
             <img src="img/la.jpg" class="img-responsive">
@@ -154,20 +187,26 @@
                   <span class="glyphicon glyphicon-envelope"></span>&nbsp;<a href="mailto:israel@sagentmanagement.com">israel@sagentmanagement.com</a>                  
             </div>
             <div class="col-md-5 col-sm-6">
-                  <h3>Send a Note:</h3>
-                  <form role="form">
+                  
+                  <div class="throbber">
+                      Loading...
+                  </div>
+                  <form id="ajax-contact" method="post" action="mailer.php">
+                    <h3>Send a Note:</h3>
                     <div class="row">
                       <div class="col-sm-6">
-                         <input type="text" id="contactFormName" class="form-control" placeholder="Name:" />
+                         <input type="text" id="name" name="name" class="form-control" placeholder="Name:" />
                       </div>
                       <div class="col-sm-6">
-                        <input type="email" id="contactFormPhone" class="form-control" placeholder="Phone:" />
+                        <input type="tel" id="phone" name="phone" class="form-control" placeholder="Phone:" required />
                       </div>
                     </div>
-                    <input type="email" id="contactFormEmail" class="form-control" placeholder="Email:" />
-                    <textarea id="contactFormMessage" class="form-control" rows="6" placeholder="Message:"></textarea>
-                    <button class="btn pull-right">Submit</span></button>
-                  </form>                  
+                    <input type="email" id="email" name="email" class="form-control" placeholder="Email:" />
+                    <textarea id="message" name="message" class="form-control" rows="6" placeholder="Message:"></textarea>
+                    <button class="btn submit pull-right">SUBMIT</span></button>
+                  </form>
+                  <div class="clearfix"></div>
+                  <div id="form-messages" class="alert alert-dismissable"><button type="button" class="close" onclick="$('#form-messages').fadeOut()" aria-hidden="true">&times;</button><div class="alert-message"></div></div>                
             </div>
           </div>
         </div>

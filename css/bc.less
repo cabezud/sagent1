@@ -14,14 +14,7 @@
 @color-gray: gray;
 @color-light-gray: #F1F1F1;
 @color-dark-gray: darkgray;
-.test-1 { font-size: 20px; background-color: @color-blue; }
-.test-2 { font-size: 20px; background-color: @color-light-blue; }
-.test-3 { font-size: 20px; background-color: @color-light-blue; }
-.test-4 { font-size: 20px; background-color: @color-bright-blue; }
-.test-5 { font-size: 20px; background-color: @color-dark-blue; }
-.test-6 { font-size: 20px; background-color: @color-red; }
 
-//@import url(http://fonts.googleapis.com/css?family=Bitter);
 @font-face {
     font-family: 'bitterbold';
     src: url('../fonts/bitter-bold-webfont.eot');
@@ -43,22 +36,6 @@
     font-style: normal;
 }
 @font-face {
-    font-family: 'quicksand-regular';
-    src: url('../fonts/quicksand-regular-webfont.eot');
-    src: url('../fonts/quicksand-regular-webfont.eot?#iefix') format('embedded-opentype'),
-         url('../fonts/quicksand-regular-webfont.woff') format('woff'),
-         url('../fonts/quicksand-regular-webfont.ttf') format('truetype'),
-         url('../fonts/quicksand-regular-webfont.svg#quicksand-regular') format('svg');
-}
-@font-face {
-    font-family: 'OpenSans-ExtraBold';
-    src: url('../fonts/OpenSans-ExtraBold-webfont.eot');
-    src: url('../fonts/OpenSans-ExtraBold-webfont.eot?#iefix') format('embedded-opentype'),
-         url('../fonts/OpenSans-ExtraBold-webfont.woff') format('woff'),
-         url('../fonts/OpenSans-ExtraBold-webfont.ttf') format('truetype'),
-         url('../fonts/OpenSans-ExtraBold-webfont.svg#OpenSans-ExtraBold') format('svg');
-}
-@font-face {
     font-family: 'OpenSans-Bold';
     src: url('../fonts/OpenSans-Bold-webfont.eot');
     src: url('../fonts/OpenSans-Bold-webfont.eot?#iefix') format('embedded-opentype'),
@@ -67,24 +44,6 @@
          url('../fonts/OpenSans-Bold-webfont.svg#OpenSans-Bold') format('svg');
     font-weight: bold;
     font-style: bold;
-}
-@font-face {
-    font-family: 'OpenSans-BoldItalic';
-    src: url('../fonts/OpenSans-BoldItalic-webfont.eot');
-    src: url('../fonts/OpenSans-BoldItalic-webfont.eot?#iefix') format('embedded-opentype'),
-         url('../fonts/OpenSans-BoldItalic-webfont.woff') format('woff'),
-         url('../fonts/OpenSans-BoldItalic-webfont.ttf') format('truetype'),
-         url('../fonts/OpenSans-BoldItalic-webfont.svg#OpenSans-BoldItalic') format('svg');
-    font-weight: bold-italic;
-    font-style: bold-italic;
-}
-@font-face {
-    font-family: 'OpenSans-ExtraBoldItalic';
-    src: url('../fonts/OpenSans-ExtraBoldItalic-webfont.eot');
-    src: url('../fonts/OpenSans-ExtraBoldItalic-webfont.eot?#iefix') format('embedded-opentype'),
-         url('../fonts/OpenSans-ExtraBoldItalic-webfont.woff') format('woff'),
-         url('../fonts/OpenSans-ExtraBoldItalic-webfont.ttf') format('truetype'),
-         url('../fonts/OpenSans-ExtraBoldItalic-webfont.svg#OpenSans-ExtraBoldItalic') format('svg');
 }
 @font-face {
     font-family: 'OpenSans-Regular';
@@ -103,19 +62,6 @@
          url('../fonts/OpenSans-Light-webfont.svg#OpenSans-Light') format('svg');
     font-weight: normal;
     font-style: normal;
-}
-.css-test {
-  h1:nth-of-type(1), p:nth-of-type(1) { font-family: 'OpenSans-ExtraBold'; }
-  h1:nth-of-type(2), p:nth-of-type(2) { font-family: 'OpenSans-Bold'; }
-  h1:nth-of-type(3), p:nth-of-type(3) { font-family: 'OpenSans-BoldItalic'; }
-  h1:nth-of-type(4), p:nth-of-type(4) { font-family: 'OpenSans-ExtraBoldItalic'; }
-  h1:nth-of-type(5), p:nth-of-type(5) { font-family: 'OpenSans-Light'; }
-  h1:nth-of-type(6), p:nth-of-type(6) { font-family: 'OpenSans-Regular'; }
-  h1:nth-of-type(7), p:nth-of-type(7) { font-family: 'quicksand-regular'; }
-  h1:nth-of-type(8), p:nth-of-type(8) { font-family: 'Nunito', sans-serif, 300; }
-  h1:nth-of-type(9), p:nth-of-type(9) { font-family: 'Krona One'; }
-  h1:nth-of-type(10), p:nth-of-type(10) { font-family: 'Archivo Black'; }
-  h1:nth-of-type(11), p:nth-of-type(11) { font-family: 'bitterregular'; }
 }
 
 /************** Mixins ***************/
@@ -224,6 +170,109 @@ blockquote:after {
   }
 }
 
+/********Spinner Throbber************************************************/
+@-webkit-keyframes throbber {
+  0% {
+    background: #dde2e7;
+  }
+
+  10% {
+    background: #6b9dc8;
+  }
+
+  40% {
+    background: #dde2e7;
+  }
+}
+
+@-moz-keyframes throbber {
+  0% {
+    background: #dde2e7;
+  }
+
+  10% {
+    background: #6b9dc8;
+  }
+
+  40% {
+    background: #dde2e7;
+  }
+}
+
+@-o-keyframes throbber {
+  0% {
+    background: #dde2e7;
+  }
+
+  10% {
+    background: #6b9dc8;
+  }
+
+  40% {
+    background: #dde2e7;
+  }
+}
+
+@keyframes throbber {
+  0% {
+    background: #dde2e7;
+  }
+
+  10% {
+    background: #6b9dc8;
+  }
+
+  40% {
+    background: #dde2e7;
+  }
+}
+
+/* :not(:required) hides these rules from IE9 and below */
+.throbber {
+  top: 12em;
+  left: 45%;
+  display: none !important;
+}
+.throbber:not(:required) {
+  -webkit-animation: throbber 1500ms 300ms infinite ease-out;
+  -moz-animation: throbber 1500ms 300ms infinite ease-out;
+  -ms-animation: throbber 1500ms 300ms infinite ease-out;
+  -o-animation: throbber 1500ms 300ms infinite ease-out;
+  animation: throbber 1500ms 300ms infinite ease-out;
+  background: #dde2e7;
+  display: inline-block;
+  position: relative;
+  text-indent: -9999px;
+  width: 0.9em;
+  height: 1.5em;
+  margin: 0 1.6em;
+}
+.throbber:not(:required):before, .throbber:not(:required):after {
+  background: #dde2e7;
+  content: '\x200B';
+  display: inline-block;
+  width: 0.9em;
+  height: 1.5em;
+  position: absolute;
+  top: 0;
+}
+.throbber:not(:required):before {
+  -webkit-animation: throbber 1500ms 150ms infinite ease-out;
+  -moz-animation: throbber 1500ms 150ms infinite ease-out;
+  -ms-animation: throbber 1500ms 150ms infinite ease-out;
+  -o-animation: throbber 1500ms 150ms infinite ease-out;
+  animation: throbber 1500ms 150ms infinite ease-out;
+  left: -1.6em;
+}
+.throbber:not(:required):after {
+  -webkit-animation: throbber 1500ms 450ms infinite ease-out;
+  -moz-animation: throbber 1500ms 450ms infinite ease-out;
+  -ms-animation: throbber 1500ms 450ms infinite ease-out;
+  -o-animation: throbber 1500ms 450ms infinite ease-out;
+  animation: throbber 1500ms 450ms infinite ease-out;
+  right: -1.6em;
+}
+
 /************** Overrides ***************/
 html, body {
   height: 100%;
@@ -283,6 +332,11 @@ body {
       background-color: @color-dim-blue;
       color: @color-white;
     }
+  }
+}
+@media (min-width: 769px) and (max-width: 991px) {
+  #top-navbar .navbar-header {
+    margin-right: -20%;
   }
 }
 
@@ -467,6 +521,7 @@ body {
   padding: 0px 15%;
   color: white;
   min-height: 250px;
+  height: 250px;
   margin-top: -15px;
   display: table;
   >* {
@@ -476,8 +531,11 @@ body {
   }
 }
 @media (max-width: 768px) {
-  .item-content>* {
-    font-size: 18px;
+  .item-content {
+    min-height: 450px;
+    height: 450px;
+    padding: 0px 5%;
+    >* { font-size: 18px; }
   }
 }
 #vision {
@@ -534,7 +592,7 @@ body {
   .super-title { color: @color-white; }
 }
 #client-stories {
-  padding-bottom: 30px;
+  padding-bottom: 45px;
   .inner-tile {
     width: 100%;
     height: 0;
@@ -584,12 +642,13 @@ body {
   .contact-us-wrap {
     background-color: @color-transparent-black;
     padding-top: 15px;
-    padding-bottom: 15px;
+    padding-bottom: 60px;
   }
   a { color: white; }
-  button {
-    background-color: white;
-    color: @color-blue;
+  .submit {
+    .button-nice;
+    background-color: @color-white;
+    color: @color-black;
     padding-left: 30px;
     padding-right: 30px;
     &:hover {
@@ -599,9 +658,19 @@ body {
   }
   b { font-family: 'OpenSans-Bold', sans-serif; }  
 }
+#contact-us #form-messages {
+  display: none;
+  margin-top: 5px;
+  width: 95%;
+  position: absolute;
+  border-radius: 2px;
+  &.alert-success { top: 0%; background-color: @color-white; color: @color-blue; }
+}
+
 #contact-us .form-control {
   background: none;
   border: 2px solid white;
+  border-radius: 2px;
   color: white;
   font-size: 17px;
   margin-bottom: 5px;
