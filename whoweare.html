@@ -41,7 +41,7 @@
 
   <script src="js/jquery-1.10.2.min.js"></script>
   <script src="js/jquery-ui.min.js"></script>
-  <script src="js/less-1.7.0.min.js"></script>
+  <!--<script src="js/less-1.7.0.min.js"></script>-->
   <script src="js/respond.min.js"></script>
   <script type="text/javascript" src="js/bootstrap.min.js"></script>
   <script src="js/custom.js"></script>
@@ -138,10 +138,10 @@
       <div class="row">
         <div class="col-sm-8 col-sm-offset-2">
           <ul>
+            <li>To be trusted, value-add business partners to management teams</li>
             <li>To drive client growth through our in-house approach</li>
-            <li>To deliver an uncompromising standard of service and integrity</li>
-            <li>To be totally committed to our clients' business and success</li>
             <li>To be highly available and responsive to our clients' needs</li>
+            <li>To deliver an uncompromising standard of service and integrity</li>
           </ul>
         </div>
       </div>
@@ -259,6 +259,47 @@
         </div>
       </div><!--/.row.bio-->
     </div>
+
+    <div id="contact-us">
+      <div class="contact-us-wrap">
+        <div class="container">
+          <div class="row">
+              <div class="col-md-5 col-md-offset-1 col-sm-6">
+                  <h3>Reach Out:</h3>
+                  <h6>United States</h6>
+                  <span class="glyphicon glyphicon-phone-alt"></span>&nbsp;<a href="tel:4082631040">(408) 263-1040</a><br/>
+                  <span class="glyphicon glyphicon-envelope"></span>&nbsp;<a href="mailto:info@sagentmanagement.com">info@sagentmanagement.com</a>
+                  <h5>Israel</h5>
+                  <span class="glyphicon glyphicon-phone-alt"></span>&nbsp;<a href="tel:972528394530">&#43;972-52-8394530</a><br/>
+                  <span class="glyphicon glyphicon-envelope"></span>&nbsp;<a href="mailto:israel@sagentmanagement.com">israel@sagentmanagement.com</a>                  
+            </div>
+            <div class="col-md-5 col-sm-6">
+                  
+                  <div class="throbber">
+                      Loading...
+                  </div>
+                  <form id="ajax-contact" method="post" action="mailer.php">
+                    <h3>Send a Note:</h3>
+                    <div class="row">
+                      <div class="col-sm-6">
+                         <input type="text" id="name" name="name" class="form-control" placeholder="Name:" />
+                      </div>
+                      <div class="col-sm-6">
+                        <input type="tel" id="phone" name="phone" class="form-control" placeholder="Phone:" required />
+                      </div>
+                    </div>
+                    <input type="email" id="email" name="email" class="form-control" placeholder="Email:" />
+                    <textarea id="message" name="message" class="form-control" rows="6" placeholder="Message:"></textarea>
+                    <button class="btn submit pull-right">SUBMIT</span></button>
+                  </form>
+                  <div class="clearfix"></div>
+                  <div id="form-messages" class="alert alert-dismissable"><button type="button" class="close" onclick="$('#form-messages').fadeOut()" aria-hidden="true">&times;</button><div class="alert-message"></div></div>                
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
 
     <div id="push"></div>
 
