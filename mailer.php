@@ -17,7 +17,7 @@
             exit;
         }
 
-        $recipient = "cabezud@gmail.com, cabezud@yahoo.com"; //"info@sagentmanagement.com, israel@sagentmanagement.com";
+        $recipient = "info@sagentmanagement.com, israel@sagentmanagement.com";
         $subject = "Sagent website contact from $name";
         $email_content = "Name: $name\n";
         $email_content .= "Phone: $phone\n";
